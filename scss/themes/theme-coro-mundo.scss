@@ -1,0 +1,36 @@
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+/* Erudita Mundial */
+.background-primary-mundo {
+	background-color: seagreen; /*background-color: olivedrab; */
+}
+.color-primary-mundo {
+	/*Links*/
+	color: black; 
+}
+.background-secondary-mundo {
+	background-color: #589a58; /*verde-médio-médio*/
+}
+.color-secondary-mundo {
+	color: darkkhaki; text-shadow: 0.5px 0.5px darkolivegreen;
+}
+.background-tertiary-mundo {
+	background-color: #84cfd2; /*azul-insaturado-light*/
+}
+.color-tertiary-mundo {
+	color: darkkhaki; text-shadow:  0.5px 0.5px aliceblue;
+}
+.background-quaternary-mundo {
+	background-color: #d1d5d8; /*azul-muitoInsaturado-light*/
+}
+.background-header-mundo {
+	/*Header*/
+	background: linear-gradient(linen, aliceblue, darkkhaki);
+}
+.color-header-mundo {
+	color: darkolivegreen;
+}
+

@@ -1,0 +1,44 @@
+/***************************
+****************************
+Module Styles
+****************************
+***************************/
+/*Header Modules*/
+.header-primary { color: white; /*#524561 #6c5980 #524561*/ font-weight: bold; text-align: center; padding-top: 18px; padding-bottom: 18px; 
+background: #074a4c; /*linear-gradient(linen, aliceblue, darkkhaki)*/ 
+
+	/*Incluindo Mixin para layout do Header > 48em*/
+	@include medium-and-above {
+		&:after {
+				/*to clear the floating from Logo and Nav width*/
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		/*Aqui nós começamos a preparação para abrir espaço para a subida da seção Hero fazendo da seção Header absoluta e retirando a proibição para background*/
+		background: none;
+		
+		
+		/*Absolute position allows you to layer the element and z-indez determines the layer level.*/
+		position: absolute;
+		z-index: 99;
+		
+			/*to fix the width of .header-primary (which is now being positioned absolutely)*/
+		width: 100%; 		
+		
+		
+		/*.container {
+			@include flexbox-display();
+		}*/
+	}
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1598 @@
+@charset "UTF-8";
+/*
+	Note: 
+	You need to import the variables (and @mixin) first so that they are available to the code that is added later.
+*/
+/*
+	Attention: This step brings the base style sheets into style.scss in the order that they are listed.
+
+	"By breaking your CSS file out into modular SCSS partials, you have improved the readability and maintainability for yourself and the team. You have also streamlined these files into one HTTP requested CSS files using Sass".
+	-> sass input.scss output.css
+	-> sass --watch input.scss:output.css
+*/
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/***************************
+****************************
+Reset Styles
+****************************
+***************************/
+/*Mudando a importa├º├úo do arq normalize para o ponto de entrada em styles.scss*/
+/*@import 'normalize.css';*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+body {
+  color: black;
+  font-family: 'Quattrocento', serif;
+  font-weight: normal; }
+  body h1, body h2 {
+    font-family: 'Courgette', cursive; }
+  body h1, body h2, body h4 {
+    font-weight: bold; }
+  body a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none; }
+  body a:hover {
+    text-decoration: underline; }
+  body iframe {
+    width: 98%; }
+  body video {
+    width: 100%;
+    margin: 0 auto; }
+  body blockquote {
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 38px;
+    max-width: 320px;
+    margin: 0 auto; }
+
+/*
+  extra-small: at├® 400px
+	small: at├® 768px
+	medium: de 768px at├® 
+	large: acima de ...
+*/
+/*768px / 16px = 48em*/
+/* 400px */
+/*mixin that will apply only to extra small devices*/
+/*Inserindo o uso de vari├íveis, o projeto fica mais manuten├¡vel. Agora, em um ├║nico lugar os valores de .row e [class*='col-'] podem ser trabalhados em conjunto*/
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px; }
+
+@media only screen and (min-width: 75em) {
+  .feature .container {
+    max-width: 1450px; }
+
+  .gallery .container {
+    max-width: 1550px; }
+
+  .media .container, footer .container {
+    max-width: 1300px; } }
+.row {
+  /*Mudando o projeto para trab com Vari├íveis SASS*/
+  /* margin-right: -15px; */
+  /* margin-left: -15px; */
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+[class*='col-'] {
+  width: 100%;
+  /*Mudando o projeto para trab com Vari├íveis SASS*/
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.coluna-vazia {
+  /*do not collapse*/
+  min-height: 1px; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+.clearfix {
+  clear: both; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; }
+
+.flex-centered {
+  align-items: center; }
+
+.flex-justify-between {
+  justify-content: space-between; }
+
+.flex-justify-around {
+  justify-content: space-around; }
+
+@media only screen and (min-width: 32em) {
+  [class*='col-'] {
+    float: left; } }
+@media (min-width: 48em) {
+  /*768px*/
+  .col-1-12 {
+    width: 8.3333%; }
+
+  .col-1-6 {
+    width: 16.6666%; }
+
+  .col-1-4 {
+    width: 25%; }
+
+  .col-1-3 {
+    width: 33.3333%; }
+
+  .col-1-2 {
+    width: 50%; }
+
+  .col-2-3 {
+    width: 66.6666%; }
+
+  .col-3-4 {
+    width: 75%; }
+
+  .col-10-12 {
+    width: 83.3333%; }
+
+  .col-11-12 {
+    width: 91.6666%; }
+
+  .col-1 {
+    width: 100%; } }
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+@media (min-width: 25em) {
+  .pull-right-sm {
+    float: right; } }
+@media (min-width: 48em) {
+  .pull-right-med {
+    float: right; } }
+.remove-padding-top {
+  padding-top: 0px; }
+
+.remove-padding-bottom {
+  padding-top: 0px; }
+
+@media only screen and (max-width: 47.9375em) {
+  /*.remove-gutter-xs { 
+  	padding-left: 0px; 
+  	padding-right: 0px;
+  } */ }
+/*Background Modules*/
+.bg-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.bg-image > img {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  min-width: 100%; }
+
+/*Button Modules*/
+.btn {
+  /*most basic set of rules for bnt elements: mobile version*/
+  display: inline-block;
+  text-align: center;
+  /*Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered*/
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  /*Aten├º├úo: estas quatro regras abaixo s├úo espec├¡ficas para o layout mobile*/
+  padding: 12px 30px;
+  font-size: 1.313em;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  /*Aplicando o efeito de transi├º├úo*/
+  transition: all 0.3s ease 0s; }
+  @media only screen and (min-width: 48em) {
+    .btn {
+      font-size: 1.1313em; } }
+
+.btn-primary {
+  color: rgba(32, 17, 49, 0.8);
+  /*roxo-m├®dio-dark-.8 roxo-insaturado-lightPlus-#5f5767 verm-insaturado-m├®dio-#6d5151 */
+  border-color: #516b51;
+  Background-color: #516b51;
+  /*azul-insaturadoMinus-m├®dio-#a2a4a7*/ }
+
+.btn-primary:hover {
+  color: #201131;
+  /*roxo-m├®dio-dark-.8 */
+  background: none;
+  /*border-color: white;*/
+  text-decoration: none; }
+
+.btn-secondary {
+  color: black;
+  /*#ffffff*/
+  background: transparent;
+  border: 1px solid #fff; }
+
+.btn-secondary:hover {
+  color: rgba(32, 17, 49, 0.8);
+  /*roxo-m├®dio-dark-.6*/
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5); }
+
+.btn-primary-mundo {
+  background: white;
+  border-color: white;
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+.btn-primary-mundo:hover {
+  background: none;
+  border-color: white;
+  text-decoration: none; }
+
+.btn-primary-brasil {
+  background: white;
+  border-color: white;
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+.btn-primary-brasil:hover {
+  background: none;
+  border-color: white;
+  text-decoration: none; }
+
+.btn-primary-historico {
+  background: white;
+  border-color: white;
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+.btn-primary-historico:hover {
+  background: none;
+  border-color: white;
+  text-decoration: none; }
+
+@media only screen and (min-width: 48em) {
+  .btn-primary, .btn-secondary {
+    padding: 10px 15px; } }
+.btn-nav {
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+.btn-hero {
+  height: 60px;
+  font-size: 1.750em; }
+  @media only screen and (max-width: 25em) {
+    .btn-hero {
+      font-size: 1.350em; } }
+
+.btn-toggle-menu {
+  /* Com este posicionamento o elemt sai do fluxo do layout e deixa de ocupar espa├ºo */
+  position: absolute;
+  top: 15px;
+  right: 15px; }
+
+@media only screen and (max-width: 25em) {
+  .btn-toggle-menu {
+    top: 10px;
+    right: 5px;
+    font-size: 1.250em;
+    padding: 12px 20px; } }
+@media only screen and (min-width: 48em) {
+  .btn-toggle-menu {
+    display: none; } }
+
+/***************************
+****************************
+Module Styles
+****************************
+***************************/
+/*Header Modules*/
+.header-primary {
+  color: white;
+  /*#524561 #6c5980 #524561*/
+  font-weight: bold;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background: #074a4c;
+  /*linear-gradient(linen, aliceblue, darkkhaki)*/
+  /*Incluindo Mixin para layout do Header > 48em*/ }
+  @media only screen and (min-width: 48em) {
+    .header-primary {
+      /*Aqui n├│s come├ºamos a prepara├º├úo para abrir espa├ºo para a subida da se├º├úo Hero fazendo da se├º├úo Header absoluta e retirando a proibi├º├úo para background*/
+      background: none;
+      /*Absolute position allows you to layer the element and z-indez determines the layer level.*/
+      position: absolute;
+      z-index: 99;
+      /*to fix the width of .header-primary (which is now being positioned absolutely)*/
+      width: 100%;
+      /*.container {
+      	@include flexbox-display();
+      }*/ }
+      .header-primary:after {
+        /*to clear the floating from Logo and Nav width*/
+        content: "";
+        display: table;
+        clear: both; } }
+
+/*Hero Modules*/
+.hero {
+  text-align: center; }
+  .hero .hero-body {
+    /*Usando do contexto de pos para colocar o conte├║do de .hero-body ├á frente na pilha*/
+    position: relative; }
+  .hero .hero-title {
+    font-size: 4.625em;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    color: #bb826b;
+    /*#9199a0 #afc9e0 #e8ded9 #e8b193*/
+    text-shadow: 2px 2px #4a3737;
+    /*#eae7ca*/ }
+  .hero .hero-subtitle {
+    color: #4a3737;
+    /*#9199a0 #afc9e0 #e8ded9 #e8b193*/
+    text-shadow: 1px 1px #efefea;
+    /*#eae7ca*/
+    font-size: 2.200em;
+    font-weight: normal;
+    margin-top: 25px;
+    margin-bottom: 25px; }
+
+.hero-primary {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  height: 600px; }
+  .hero-primary.bg-image > img {
+    opacity: 0.8; }
+  .hero-primary .hero-body {
+    margin: 120px auto; }
+    @media only screen and (min-width: 48em) {
+      .hero-primary .hero-body {
+        margin: 260px auto; } }
+
+.hero-secondary {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  height: 560px; }
+  .hero-secondary .hero-subtitle, .hero-secondary .hero-title {
+    visibility: hidden; }
+  .hero-secondary .hero-title {
+    font-size: 3.625em;
+    padding-top: 265px; }
+    @media only screen and (min-width: 48em) {
+      .hero-secondary .hero-title {
+        padding-top: 160px; } }
+  .hero-secondary .hero-body {
+    margin: 120px auto; }
+    @media only screen and (min-width: 48em) {
+      .hero-secondary .hero-body {
+        margin: 260px auto; } }
+  .hero-secondary.bg-image > img {
+    opacity: 0.7; }
+
+@media only screen and (min-width: 48em) {
+  .hero-secondary {
+    height: 300px; } }
+.hero-subtitle + button {
+  margin-top: 25px; }
+
+/*Logo Modules*/
+.logo {
+  overflow: hidden;
+  display: inline-block;
+  /*Inserindo Mixin*/ }
+  @media only screen and (min-width: 48em) {
+    .logo {
+      width: auto;
+      /*Aten├º├úo: aqui n├│s utilizamos a propriedade float para puxar os elemets do logo para a esquerda no layout  nos dispositivos maiores, bem como para for├ºar o colapso do container para fazer a integra├º├úo do layout do logo com o background do Hero*/
+      float: left; } }
+  .logo .logo-title {
+    color: #bb826b;
+    text-shadow: 2px 2px #4a3737;
+    font-size: 2em;
+    margin: 15px 0; }
+    @media only screen and (max-width: 530px) {
+      .logo .logo-title {
+        margin-top: 65px; } }
+  .logo .logo-subtitle {
+    color: #4a3737;
+    text-shadow: 1px 1px #efefea; }
+  .logo:hover {
+    text-decoration: none; }
+
+.logo-primary {
+  width: 64px;
+  height: 64px;
+  /*Inserindo Mixin*/ }
+  .logo-primary img {
+    height: 100%; }
+  @media only screen and (min-width: 48em) {
+    .logo-primary {
+      width: auto;
+      height: 50px;
+      /*Aten├º├úo: aqui n├│s utilizamos a propriedade float para puxar os elemets do logo para a esquerda no layout  nos dispositivos maiores, bem como para for├ºar o colapso do container para fazer a integra├º├úo do layout do logo com o background do Hero*/
+      float: left; } }
+
+@media only screen and (min-width: 48em) {
+  #logo-change {
+    color: #4a3737;
+    text-shadow: 1px 1px #efefea;
+    font-size: 1.5em; } }
+
+/*Media Object Modules*/
+.media, .media-body {
+  overflow: hidden;
+  position: relative; }
+
+.media figure {
+  margin: 16px 0 16px 20px; }
+.media img {
+  width: 95%;
+  height: 264px; }
+.media .img-retrato {
+  height: 95%; }
+.media .media-item {
+  float: left;
+  margin-right: 10px; }
+  @media only screen and (max-width: 25em) {
+    .media .media-item {
+      float: none; } }
+.media .media-item i {
+  color: #6b7782;
+  /*azul-insaturado-m├®dio-#6b778*/
+  font-size: 3.5em; }
+
+.media-desloc-top {
+  position: relative;
+  bottom: 16px; }
+
+.media-desloc-bot-left {
+  position: relative;
+  top: 40px;
+  left: 20px; }
+
+.media-pad {
+  padding: 30px 0 30px 0; }
+
+@media (min-width: 68em) {
+  /*1088px*/
+  .media-body p iframe, .media img {
+    width: 90%;
+    height: 250px; } }
+/*Social Modules*/
+.social ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px 25px; }
+  .social ul li {
+    display: inline; }
+    .social ul li a {
+      color: #334a5f;
+      text-shadow: 1px 1px #eae7ca;
+      text-decoration: none; }
+
+/*Navigation Modules*/
+.nav > ul {
+  /* It would be better practice to create a .nav-list module.*/
+  list-style: none;
+  padding: 0px;
+  margin: 0px; }
+
+.nav-primary {
+  margin-top: 35px;
+  /* ou 28px conferir? */
+  /*Aten├º├úo: Tirando a navega├º├úo do estado inicial do layout mobile*/
+  display: none; }
+  @media only screen and (min-width: 48em) {
+    .nav-primary {
+      /*For├ºando o aparecimento da navega├º├úo para dispositivos maiores que 48em*/
+      display: block;
+      /*Veja que no projeto final estas 03 linhas abaixo s├úo retiradas por causa da inclus├úo do padr├úo Flexbox no .container de header*/
+      float: right;
+      width: 60%;
+      /*leaving space to Logo*/
+      text-align: right;
+      /*Retirando o margin-top que temos para dispositivos menores que 48em*/
+      margin-top: 0; }
+      .nav-primary li {
+        display: inline-block; } }
+
+.nav-color-primary {
+  color: #b1a786;
+  font-weight: bold;
+  text-shadow: 0.4px 0.4px #e6e8e1; }
+  @media only screen and (min-width: 48em) {
+    .nav-color-primary {
+      color: #334a5f;
+      text-shadow: 1px 1px #dedbbf; } }
+
+.nav-color-secondary {
+  color: #334a5f;
+  text-shadow: 1px 1px #dedbbf; }
+
+.nav-pad {
+  padding-top: 35px;
+  padding-bottom: 35px; }
+
+.nav-pad-top {
+  padding-top: 10px; }
+
+/*Frame Modules*/
+.frame {
+  overflow: hidden; }
+
+.frame-primary {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 25px auto 40px auto; }
+  .frame-primary img {
+    width: 100%;
+    height: 100%; }
+
+.frame-content {
+  color: #334a5f;
+  text-shadow: 1px 1px #eae7ca;
+  letter-spacing: 0.2em; }
+
+@media (min-width: 48em) {
+  .frame-primary {
+    position: relative;
+    top: -43px;
+    margin: 0px auto 63px auto; } }
+/*Mask Modules*/
+.mask {
+  position: relative; }
+  .mask:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ""; }
+
+.mask-primary:before {
+  background: orange;
+  opacity: 0.3; }
+
+/*Board Modele*/
+.board {
+  margin: 20px 30px; }
+
+@media only screen and (min-width: 768px) {
+  .grid-board {
+    display: grid;
+    grid-template-columns: auto auto; }
+
+  .board-box-1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; }
+
+  .board-box-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2; }
+
+  .board-box-3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3; }
+
+  .board-box-4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; } }
+.board-title {
+  text-align: center; }
+
+.board-content {
+  font-size: 1.1em;
+  padding: 0 35px;
+  text-align: justify;
+  line-height: 30px; }
+  @media only screen and (min-width: 48em) {
+    .board-content {
+      line-height: 36px; } }
+
+@media only screen and (min-width: 890px) {
+  .board-content {
+    padding-top: 90px; } }
+.board-pad {
+  padding: 30px 0 30px 0; }
+
+[class*="board-box-"] img {
+  border: 1px solid #503e08;
+  max-width: 600px;
+  max-height: 504px; }
+
+.board-historico-primary {
+  color: #503e08;
+  /*#6f560c*/
+  text-shadow: 1px 1px #825d4e;
+  /*background: linear-gradient(#bfbdb7, #9c7768 98%);*/ }
+
+/*SVGs Modules*/
+.svg {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  height: 550px; }
+  @media only screen and (max-width: 25em) {
+    .svg {
+      height: 400px; } }
+
+.svg-primary {
+  background-color: #f7622b;
+  /*#e85c28-orange/red beige #fbfba9*/ }
+  .svg-primary picture {
+    width: 100%; }
+  .svg-primary img {
+    width: 100%;
+    padding: 0 5px; }
+  .svg-primary .svg-title {
+    font-size: 4.625em;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    color: #e8ded9;
+    /*#bb826b #9199a0 #afc9e0 #e8ded9 #e8b193 #4a3737*/
+    text-shadow: 2px 2px #4a3737;
+    /*#eae7ca*/ }
+  .svg-primary .svg-subtitle {
+    color: #e8ded9;
+    /*#9199a0 #afc9e0 #e8ded9 #e8b193*/
+    text-shadow: 1px 1px #efefea;
+    /*#eae7ca*/
+    font-size: 2.200em;
+    font-weight: normal;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: none; }
+  @media only screen and (min-width: 25em) {
+    .svg-primary .svg-body {
+      margin: 40px auto 100px auto; } }
+
+#mus {
+  float: left; }
+
+/*#erudita { display: inline-block; }*/
+/*Tooltip Module*/
+/* Tooltip container */
+.tooltip {
+  line-height: 15px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* Tooltip text */ }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 260px;
+    height: 25px;
+    background-color: #596169;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.8;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    /* Positioning the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 60%;
+    margin-left: -125px; }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 7px;
+      border-style: solid;
+      border-color: black transparent transparent transparent; }
+  .tooltip .tooltiptext-large {
+    visibility: hidden;
+    width: 260px;
+    height: 55px;
+    background-color: #596169;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.8;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    /* Positioning the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 60%;
+    margin-left: -125px; }
+    .tooltip .tooltiptext-large::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 7px;
+      border-style: solid;
+      border-color: black transparent transparent transparent; }
+  .tooltip .tooltip-brasil {
+    color: darkkhaki;
+    text-shadow: 0.5px 0.5px aliceblue; }
+  .tooltip .tooltip-mundo {
+    color: #516b51;
+    text-shadow: 0.5px 0.5px burlywood; }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
+  .tooltip:hover .tooltiptext-large {
+    visibility: visible; }
+
+.tooltip-span {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  position: relative;
+  bottom: 42px;
+  left: 22px; }
+
+/*Intro Module*/
+.intro {
+  padding: 10px 0 50px 0; }
+
+.intro-title {
+  text-align: center; }
+
+.intro-content {
+  text-align: justify;
+  line-height: 20px;
+  /*
+  		Note: by subtracting 0.0625 from your mq-1 variable, you are basically removing a pixel. You remove the pixel so that the next media query mixin will not overlap.
+  	*/ }
+  @media only screen and (max-width: 47.9375em) {
+    .intro-content {
+      padding-left: 15px;
+      line-height: 24px; } }
+
+.intro-primary {
+  background-image: linear-gradient(linen, aliceblue, linen); }
+
+/*Dissertation Module*/
+.dissert {
+  padding: 30px 0 50px 0; }
+
+.dissert-title {
+  text-align: center; }
+
+.dissert-content {
+  text-align: justify;
+  line-height: 25px; }
+  @media only screen and (min-width: 48em) {
+    .dissert-content {
+      line-height: 29px; } }
+
+.dissert-title-pad-top {
+  padding-top: 30px; }
+
+.dissert-content-pad-top {
+  padding-top: 5px; }
+
+.dissert-dt {
+  font-size: 1.5em; }
+
+.dissert-span {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  position: relative;
+  bottom: 42px;
+  left: 22px; }
+
+.dissert-hover {
+  color: #bbb090;
+  /*#6f560c*/
+  text-shadow: 2px 2px #c58c75;
+  font-size: 2.5em; }
+
+.dissert-hover:hover {
+  text-shadow: 3px 3px #46291f;
+  /*4px 4px #ab7969*/ }
+
+.dissert-mundo-primary {
+  background-color: #87a9b5; }
+
+.dissert-mundo-title {
+  color: #1b231b; }
+
+.dissert-mundo-subtitle {
+  color: aliceBlue;
+  font-weight: bold;
+  text-shadow: 0.2px 0.2px #4848f9; }
+
+.dissert-mundo-block, .dissert-mundo-span, .dissert-brasil-fig {
+  color: #516b51;
+  text-shadow: 0.5px 0.5px burlywood; }
+
+.dissert-brasil-primary {
+  background-color: #589a58; }
+
+.dissert-brasil-title {
+  color: black; }
+
+.dissert-brasil-subtitle {
+  color: darkkhaki;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px darkolivegreen; }
+
+.dissert-brasil-block, .dissert-brasil-span, .dissert-brasil-fig {
+  color: darkkhaki;
+  text-shadow: 0.5px 0.5px aliceblue; }
+
+.dissert-historico-primary {
+  background: linear-gradient(#ded7d0, aliceblue, linen); }
+
+.dissert-historico-secondary {
+  background: linear-gradient(#e0c2a5, aliceblue 99%, #796e62); }
+  @media only screen and (min-width: 48em) {
+    .dissert-historico-secondary {
+      background: linear-gradient(#e0c2a5, aliceblue 97.5%, #796e62); } }
+
+.dissert-historico-ternary {
+  background-color: antiquewhite; }
+
+.dissert-historico-block, .dissert-historico-span, .dissert-historico-fig {
+  text-shadow: 0.5px 0.5px #c58c75; }
+
+[class="fas fa-at"] {
+  margin-top: 30px; }
+
+[class*="fab "] {
+  margin-top: 10px;
+  margin-bottom: 30px; }
+  @media only screen and (min-width: 48em) {
+    [class*="fab "] {
+      margin-bottom: 70px; } }
+
+/*Feature Modules*/
+.feature {
+  text-align: left; }
+  .feature img {
+    width: 100%;
+    height: 204px; }
+  .feature .feature-mundo img {
+    border-top: 4px solid #1b231b; }
+  .feature .feature-brasil img {
+    border-top: 4px solid black; }
+  .feature .feature-title, .feature .feature-subtitle {
+    margin-top: 0; }
+  .feature .feature-title {
+    padding-top: 20px;
+    margin-bottom: 0; }
+  .feature .feature-subtitle {
+    padding-top: 10px; }
+  .feature .feature a {
+    color: #201131;
+    /*#6d65b3*/
+    margin-left: 10px;
+    text-decoration: none; }
+  .feature .feature a:hover {
+    text-decoration: underline; }
+
+/*Feature Primary*/
+.feature-primary {
+  padding-bottom: 40px; }
+
+.feature-mundo {
+  background-color: #87a9b5; }
+
+.feature-mundo-title {
+  color: #1b231b; }
+
+.feature-mundo-subtitle {
+  color: aliceBlue;
+  font-weight: bold;
+  text-shadow: 0.2px 0.2px #4848f9; }
+
+.feature-brasil {
+  background-color: #589a58; }
+
+.feature-brasil-title {
+  color: black; }
+
+.feature-brasil-subtitle {
+  color: darkkhaki;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px darkolivegreen; }
+
+/*Tag Modules*/
+.tag {
+  color: white;
+  padding: 10px 35px 10px 15px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  border-radius: 0 0 4px 0; }
+
+.tag-feature-mundo {
+  background: #1b231b; }
+
+.tag-feature-brasil {
+  background: black; }
+
+/*Gallery Modules*/
+.gallery {
+  padding: 60px 5px 40px 5px; }
+  .gallery [class*='col-'] {
+    padding: 0; }
+  .gallery img {
+    width: 100%;
+    height: 204px;
+    border: 1px solid #dcdcd3;
+    /*#dadac0*/
+    border-radius: 10px 10px 0 0; }
+  .gallery img:hover {
+    box-shadow: 0px 0px 1px 2px #dbdba8 0px 0px 2px 4px #eae7ca; }
+  .gallery a {
+    margin-bottom: 0;
+    margin-left: 0; }
+  .gallery p {
+    margin-top: 0;
+    padding: 5px 10px 10px 10px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #dcdcd3;
+    /*#dadac0*/
+    position: relative;
+    bottom: 5px;
+    border-radius: 0 0 10px 10px; }
+
+.gallery-primary {
+  color: #1e252b;
+  text-shadow: 1px 1px #eae7ca;
+  background: aliceblue; }
+
+@media only screen and (min-width: 32em) {
+  .gallery {
+    padding-top: 80px;
+    padding-bottom: 60px; }
+    .gallery .col-1-4 {
+      width: 49.9999%; }
+    .gallery [class*='col-']:nth-child(odd) {
+      padding-right: 5px; }
+    .gallery .row {
+      margin-bottom: 20px; } }
+@media only screen and (min-width: 48em) {
+  .gallery .col-1-4 {
+    width: 25%; }
+
+  .gallery [class*='col-']:nth-child(even) {
+    padding-right: 5px; } }
+/*Footer Modules*/
+footer {
+  color: white;
+  /*#524561 #6c5980 #524561*/
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*footer p, footer small { text-shadow: 1px 1px #abaaa4; }*/
+  /*& .row:last-of-type { padding-top: 30px; border-top: 1px solid white; }*/ }
+  footer .row:first-of-type {
+    padding-bottom: 20px; }
+  footer .flex-footer [col*='col-'] {
+    float: none; }
+  footer .flex-footer .col-1-6 {
+    width: 16.6666%; }
+  footer .flex-footer .col-1-4 {
+    width: 25%; }
+  footer .flex-footer .col-1-3 {
+    width: 33.3333%; }
+
+.background-footer-primary {
+  background-color: #074a4c; }
+
+.background-footer-secondary {
+  background-color: white; }
+
+.footer-primary {
+  color: #b1a786;
+  font-weight: bold;
+  text-shadow: 0.4px 0.4px #e6e8e1; }
+
+.footer-secondary {
+  color: #334a5f;
+  text-shadow: 1px 1px #dedbbf; }
+
+.footer-pad-top {
+  padding-top: 10px; }
+
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+.background-primary {
+  /*dispositivos menores*/
+  background-image: linear-gradient(#2c3c3c, lightgoldenrodyellow 20%, #2c3c3c);
+  /*dispositivos maiores*/
+  /*background-image: linear-gradient(rgba(44, 60, 60,0.6), lightgoldenrodyellow 20%, rgba(44, 60, 60,0.4), rgba(185, 156, 118, 0.8))*/ }
+
+.color-primary {
+  color: black;
+  text-shadow: 1px 1px #eae7ca; }
+
+.background-secondary {
+  background-color: Khaki; }
+
+.color-secondary {
+  color: black; }
+
+.color-tertiary {
+  color: black;
+  text-shadow: 0 0 0.3px lightsalmon; }
+
+.color-quaternary {
+  color: lightsalmon; }
+
+.background-nav {
+  /*Menu Navega├º├úo do Site*/
+  background-color: aliceblue; }
+
+.color-nav {
+  /*Menu de navaga├º├úo interna da p├ígina*/
+  color: #556055;
+  /*verde-insaturado-m├®dio*/
+  text-shadow: 0 0 8px goldenrod, 0 0 16px #ba613b; }
+
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+/* Erudita Mundial */
+.background-primary-mundo {
+  background-color: seagreen;
+  /*background-color: olivedrab; */ }
+
+.color-primary-mundo {
+  /*Links*/
+  color: black; }
+
+.background-secondary-mundo {
+  background-color: #589a58;
+  /*verde-m├®dio-m├®dio*/ }
+
+.color-secondary-mundo {
+  color: darkkhaki;
+  text-shadow: 0.5px 0.5px darkolivegreen; }
+
+.background-tertiary-mundo {
+  background-color: #84cfd2;
+  /*azul-insaturado-light*/ }
+
+.color-tertiary-mundo {
+  color: darkkhaki;
+  text-shadow: 0.5px 0.5px aliceblue; }
+
+.background-quaternary-mundo {
+  background-color: #d1d5d8;
+  /*azul-muitoInsaturado-light*/ }
+
+.background-header-mundo {
+  /*Header*/
+  background: linear-gradient(linen, aliceblue, darkkhaki); }
+
+.color-header-mundo {
+  color: darkolivegreen; }
+
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+/* Erudita Brasil */
+.background-primary-brasil {
+  background-color: #66c7ea;
+  /*azul-m├®dio-light*/ }
+
+.color-primary-brasil {
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+.background-secondary-brasil {
+  background-color: #0b3544;
+  /*azul-saturado-dark*/ }
+
+.color-secondary-brasil {
+  color: #1b231b;
+  /*verde-insaturado-darkPlus*/ }
+
+.background-tertiary-brasil {
+  background-color: #87a9b5;
+  /*azul-insaturado-light*/ }
+
+.color-tertiary-brasil {
+  color: aliceBlue;
+  text-shadow: 0.2px 0.2px #4848f9;
+  /*azul-p├║rpura-saturado-light */ }
+
+.background-quaternary-brasil {
+  background-color: #e3e9ec;
+  /*azul-muitoInsaturado-lightPlus*/ }
+
+.color-quaternary-brasil {
+  color: #516b51;
+  /*verde-insaturado-dark*/
+  text-shadow: 0.5px 0.5px burlywood; }
+
+.background-quinary-brasil {
+  background-color: #146f90;
+  /*azul-saturadoPlus-m├®dio*/ }
+
+.background-senary-brasil {
+  background-color: mintCream; }
+
+.background-header-brasil {
+  /*Header*/
+  background: linear-gradient(paleGoldenRod, aliceblue, paleGoldenRod); }
+
+.color-header-brasil {
+  /*Header*/
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+/* Erudita Hist├│rico */
+.background-primary-historico {
+  background-color: cadetBlue; }
+
+.color-primary-historico {
+  color: mintCream; }
+
+.background-secondary-historico {
+  background: linear-gradient(linen, aliceblue, linen); }
+
+.color-secondary-historico {
+  /*Title*/
+  color: #556055;
+  /*verde-insaturado-m├®dio*/ }
+
+.background-tertiary-historico {
+  background: linear-gradient(#e0c2a5, aliceblue 98%, #796e62);
+  /*linear-gradient(#daac81, aliceblue, aliceblue 99%, #6f5c49)*/ }
+
+.color-tertiary-historico {
+  /*Paragraph*/
+  color: #556055;
+  /*verde-insaturado-m├®dio*/
+  text-shadow: 0 0 4px lightsalmon;
+  /*hover= none*/ }
+
+.background-quaternary-historico {
+  background-color: #074a4c;
+  /*verde-saturadoPlus-darkPlus*/ }
+
+.color-quaternary-historico {
+  /*Link: cor padr├úo do navegador*/ }
+
+.background-header-historico {
+  /*Header*/
+  background: linear-gradient(paleGoldenRod, white, paleGoldenRod); }
+
+.color-header-historico {
+  /*Header*/
+  color: #516b51;
+  /*verde-insaturado-dark*/ }
+
+/*# sourceMappingURL=styles.css.map */

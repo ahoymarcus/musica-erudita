@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
+  <title>SVG - Musica Erudita_site</title>
+  <desc>Apresentação do Coro Sinfônico Comunitário da UnB - Requiem, 1º semestre de 2018</desc>
+ 
+  
+  <line x1="10" y1="20" x2="250" y2="20" stroke="#e8ded9" stroke-width="4" />
+	<line x1="10" y1="50" x2="250" y2="50" stroke="#e8ded9" stroke-width="4" />
+	<line x1="10" y1="80" x2="250" y2="80" stroke="#e8ded9" stroke-width="4" />
+	<line x1="10" y1="110" x2="250" y2="110" stroke="#e8ded9" stroke-width="4" />
+  <line x1="10" y1="140" x2="250" y2="140" stroke="#e8ded9" stroke-width="4" />
+	<!--#bfa195-->
+	
+	<!--Colcheia tipo-01-->
+	<path d="M 430 110 L 420 105 L 420 115 420 125 C 400 120 410 135 421 125" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="1s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 1 -->
+	
+	<!--Colcheia tipo-02-->
+	<path d="M 430 110 L 420 105 L 420 115 420 125 C 398 124 410 135 421 125" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="2.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 2 -->
+	
+	<!--Semibreve tipo-02-->
+	<ellipse cx="430" cy="90" rx="5" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="3.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</ellipse><!-- 3 -->
+	
+	<!--Semínima tipo-03-->
+	<path d="M 430 55 L 430 65 430 75 C 410 70 420 85 431 75" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="4.5s"
+			dur="16s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 4 repeatCount="indefinite"-->
+	
+	<!--Semínima tipo-01-->
+	<path d="M 430 55 L 430 65 430 75 Q 410 80 433 80" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="5.5s"
+			dur="16s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 5 repeatCount="indefinite"-->
+	
+	<!--Semínima tipo-02-->
+	<path d="M 430 75 L 430 95 Q 410 100 433 100" stroke="black" stroke-width="5" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="6.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 6 -->
+	
+	<!--Semínima tipo-04-->
+	<path d="M 430 80 L 430 90 430 100 C 410 95 420 111 431 100" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="7.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 7 -->
+	
+	<!--Semibreve tipo-01-->
+  <ellipse cx="430" cy="130" rx="6" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="8.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</ellipse><!-- 8 -->
+	
+	<!--Semínima tipo-03-->
+	<path d="M 430 55 L 430 65 430 75 C 410 70 420 85 431 75" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="9.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 9 -->
+	
+	<!--Semínima tipo-01-->
+	<path d="M 430 45 L 430 55 430 65 Q 410 70 433 70" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="10.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 10 -->
+	
+	<!--Semínima tipo-03-->
+	<path d="M 430 28 L 430 38 430 48 C 410 43 420 58 431 48" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="11.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 11 -->
+	
+	<!--Semínima tipo-01-->
+	<path d="M 430 45 L 430 55 430 65 Q 410 70 433 70" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="12.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 12 -->
+	
+	<path d="M 430 55 L 430 65 430 75 Q 410 80 433 80" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="13.5s"
+			dur="16s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 13 repeatCount="indefinite"-->
+	
+	<!--Semínima tipo-01-->
+	<path d="M 430 45 L 430 55 430 65 Q 410 70 433 70" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="14.5s"
+			dur="16s"
+			fill="freeze"
+      
+		/>
+	</path><!-- 14 repeatCount="indefinite"-->
+	
+	<!--Colcheia tipo-01-->
+	<path d="M 430 25 L 420 20 L 420 30 420 40 C 400 35 410 50 421 40" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="15.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 15 -->
+	
+	<!--Colcheia tipo-02-->
+	<path d="M 430 45 L 420 40 L 420 50 420 60 C 398 59 410 70 421 60" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="16.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 16 -->
+	
+	<!--Semínima tipo-03-->
+	<path d="M 430 55 L 430 65 430 75 C 410 70 420 85 431 75" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="17.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 17 -->
+	
+	<!--Colcheia tipo-02-->
+	<path d="M 430 110 L 420 105 L 420 115 420 125 C 398 124 410 135 421 125" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="18.5s"
+			dur="16s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 18 -->
+	
+	<!--Semibreve tipo-01-->
+  <ellipse cx="430" cy="130" rx="6" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-650,0"
+			begin="19.5s"
+			dur="16s"
+			fill="freeze"
+			
+		/>
+	</ellipse><!-- 19 repeatCount="indefinite"-->
+	
+	
+	
+	
+</svg>
+
+
+
+
+

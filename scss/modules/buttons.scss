@@ -1,0 +1,107 @@
+/*Button Modules*/
+.btn {
+			/*most basic set of rules for bnt elements: mobile version*/
+	display: inline-block;
+	text-align: center;
+	
+		/*Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered*/
+	white-space: nowrap;
+	vertical-align: middle;
+	background-image: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	
+	/*Atenção: estas quatro regras abaixo são específicas para o layout mobile*/
+	padding: 12px 30px;
+	font-size: 1.313em;
+	font-weight: bold;
+	border-radius: 4px;
+	text-decoration: none;
+	
+	/*Aplicando o efeito de transição*/
+	transition: all 0.3s ease 0s;
+	
+	@include medium-and-above {
+		font-size: 1.1313em;
+	}
+}
+
+.btn-primary {
+	color: rgba(32, 17, 49, 0.8); /*roxo-médio-dark-.8 roxo-insaturado-lightPlus-#5f5767 verm-insaturado-médio-#6d5151 */
+  border-color: #516b51;
+  Background-color: #516b51; /*azul-insaturadoMinus-médio-#a2a4a7*/ 
+}
+.btn-primary:hover {
+	color: rgba(32, 17, 49, 1); /*roxo-médio-dark-.8 */
+	background: none;
+	/*border-color: white;*/
+	text-decoration: none;
+}
+.btn-secondary {
+	color: black; /*#ffffff*/ background: transparent; border: 1px solid #fff;  
+}
+.btn-secondary:hover {
+	color: rgba(32, 17, 49, 0.8); /*roxo-médio-dark-.6*/ background-color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.5);
+}
+.btn-primary-mundo {
+	background: white;
+  border-color: white;
+  color: #516b51; /*verde-insaturado-dark*/
+}
+.btn-primary-mundo:hover {
+	background: none;
+	border-color: white; 
+	text-decoration: none;
+}
+.btn-primary-brasil {
+	background: white;
+  border-color: white;
+  color: #516b51; /*verde-insaturado-dark*/
+}
+.btn-primary-brasil:hover {
+	background: none;
+	border-color: white; 
+	text-decoration: none;
+}
+.btn-primary-historico {
+	background: white;
+  border-color: white;
+  color: #516b51; /*verde-insaturado-dark*/
+}
+.btn-primary-historico:hover {
+	background: none;
+	border-color: white; 
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 48em) {
+	.btn-primary, .btn-secondary {
+		padding: 10px 15px;
+	}
+}
+
+.btn-nav { color: #516b51; /*verde-insaturado-dark*/ }
+
+.btn-hero { 
+  height: 60px;  
+	font-size: 1.750em; 
+  @include extra-small-only {
+		font-size: 1.350em;
+	}
+	
+}
+
+.btn-toggle-menu {
+			/* Com este posicionamento o elemt sai do fluxo do layout e deixa de ocupar espaço */
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.btn-toggle-menu {
+	@include extra-small-only { top: 10px; right: 5px;font-size: 1.250em; padding: 12px 20px; }
+	@include medium-and-above { display: none; }
+}
+
+
+

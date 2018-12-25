@@ -1,0 +1,15 @@
+/*Frame Modules*/
+.frame { overflow: hidden; 
+
+}
+
+.frame-primary { 
+	width: 200px; height: 200px; border-radius: 100px; margin: 25px auto 40px auto; 
+	& img { width: 100%; height: 100%; }
+}
+
+.frame-content { color: #334a5f; text-shadow: 1px 1px #eae7ca; letter-spacing: 0.2em; }
+
+@media (min-width: 48em) {
+	.frame-primary { position: relative; top: -43px; margin: 0px auto 63px auto; }
+}

@@ -1,0 +1,99 @@
+/*Inserindo o uso de variáveis, o projeto fica mais manutenível. Agora, em um único lugar os valores de .row e [class*='col-'] podem ser trabalhados em conjunto*/
+$gutter: 30px;
+$gutter-margin: ($gutter / 2);
+
+
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+.container { 
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto; 
+	margin-left: auto;
+	max-width: 1170px;
+}
+
+@media only screen and (min-width: 75em) {
+	.feature .container  { max-width: 1450px; }
+	.gallery .container  { max-width: 1550px; }
+	.media .container, footer .container { max-width: 1300px; }
+}
+
+.row { 
+	/*Mudando o projeto para trab com Variáveis SASS*/
+	/* margin-right: -15px; */
+	/* margin-left: -15px; */
+	margin-right: (-$gutter-margin);
+	margin-left: (-$gutter-margin);
+}
+.row:after { content: ""; display: table; clear: both; }
+
+[class*='col-'] {
+	width: 100%;
+	
+	/*Mudando o projeto para trab com Variáveis SASS*/
+	/* padding-left: 15px; */
+	/* padding-right: 15px; */
+	padding-left: ($gutter-margin);
+	padding-right: ($gutter-margin);
+}
+
+.coluna-vazia { /*do not collapse*/
+	min-height: 1px;
+}
+
+.show { display: block; }
+.hide { display: none; }
+
+.clearfix { clear: both; }
+
+.flex-container { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-wrap: wrap; }
+.flex-centered { align-items: center; }
+.flex-justify-between { justify-content: space-between; }
+.flex-justify-around { justify-content: space-around; }
+
+@media only screen and (min-width: 32em) {
+	[class*='col-'] { float: left; }
+}
+
+@media (min-width: 48em) { /*768px*/
+	
+	
+	.col-1-12 { width: 8.3333%; }
+	.col-1-6 { width: 16.6666%;}
+	.col-1-4 { width: 25%; }
+	.col-1-3 { width: 33.3333%; }
+	.col-1-2 { width: 50%; }
+	.col-2-3 { width: 66.6666%; }
+	.col-3-4 { width: 75%; }
+	.col-10-12 { width: 83.3333%; }
+	.col-11-12 { width: 91.6666%; }
+	.col-1 { width: 100%; }
+}
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+@media (min-width: 25em) {
+	.pull-right-sm { float: right; }
+}
+@media (min-width: 48em) {
+	.pull-right-med { float: right; }
+}
+
+.remove-padding-top { padding-top: 0px; }
+.remove-padding-bottom { padding-top: 0px; }
+
+@media only screen and (max-width: 47.9375em) {
+	/*.remove-gutter-xs { 
+		padding-left: 0px; 
+		padding-right: 0px;
+	} */
+}
+
+
+
+

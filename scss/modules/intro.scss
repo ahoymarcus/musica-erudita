@@ -1,0 +1,21 @@
+/*Intro Module*/
+.intro { padding: 10px 0 50px 0; }
+.intro-title { text-align: center; }
+.intro-content { 
+  text-align: justify;
+	line-height: 20px; 
+ @include extra-small-and-small {
+	& { 
+	  padding-left: 15px; 
+		line-height: 24px; 
+	}
+ }
+}
+
+	
+
+.intro-primary {
+	background-image: linear-gradient(linen, aliceblue, linen);
+}
+
+

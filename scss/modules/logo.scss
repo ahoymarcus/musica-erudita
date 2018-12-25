@@ -1,0 +1,44 @@
+/*Logo Modules*/
+.logo { 
+	overflow: hidden; 
+	display: inline-block; 
+	
+	/*Inserindo Mixin*/
+	@include medium-and-above {
+		width: auto;
+		
+		/*Atenção: aqui nós utilizamos a propriedade float para puxar os elemets do logo para a esquerda no layout  nos dispositivos maiores, bem como para forçar o colapso do container para fazer a integração do layout do logo com o background do Hero*/
+		float: left;
+	}
+	
+	.logo-title { color: #bb826b; text-shadow: 2px 2px #4a3737; font-size: 2em; margin: 15px 0; 
+		@media only screen and (max-width: 530px) {
+			margin-top: 65px; 
+		}
+	}
+	.logo-subtitle { color: #4a3737; text-shadow: 1px 1px #efefea; }
+	
+	&:hover { text-decoration: none; }
+}
+
+.logo-primary { 
+	width: 64px; 
+	height: 64px;
+	
+	& img { height: 100%; }
+	
+	/*Inserindo Mixin*/
+	@include medium-and-above {
+		width: auto;
+		height: 50px; 
+		
+		/*Atenção: aqui nós utilizamos a propriedade float para puxar os elemets do logo para a esquerda no layout  nos dispositivos maiores, bem como para forçar o colapso do container para fazer a integração do layout do logo com o background do Hero*/
+		float: left;
+	}
+}
+
+#logo-change { 
+	@include medium-and-above {
+		color: #4a3737; text-shadow: 1px 1px #efefea; font-size: 1.5em;
+	} 
+}

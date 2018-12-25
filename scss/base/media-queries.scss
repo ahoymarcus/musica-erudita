@@ -1,0 +1,46 @@
+/*
+  extra-small: até 400px
+	small: até 768px
+	medium: de 768px até 
+	large: acima de ...
+*/
+$mq-1: 48em !default; /*768px / 16px = 48em*/
+$mq-2: 25em; /* 400px */
+
+/*mixin that will apply only to extra small devices*/
+@mixin extra-small-only {
+	@media only screen and (max-width: $mq-2) {
+		@content;
+	}
+}
+
+@mixin extra-small-and-small {
+	/*
+			Note: by subtracting 0.0625 from your mq-1 variable, you are basically removing a pixel. You remove the pixel so that the next media query mixin will not overlap.
+		*/
+	@media only screen and (max-width: $mq-1 - 0.0625) {
+		@content;
+	}
+}
+
+@mixin small-only {
+	@media only screen and (min-width: $mq-2) and (max-width: $mq-1) {
+		@content
+	}	
+}
+
+@mixin small-and-above {
+	@media only screen and (min-width: $mq-2) {
+		@content;
+	}
+}
+
+
+@mixin medium-and-above {
+	@media only screen and (min-width: $mq-1) {
+		@content;
+	}
+}
+
+
+

@@ -1,0 +1,77 @@
+html { color: black; background-color: #f3f3a8; /*musgo-#4e4e35 mármore-amarelo#e8e8c0*/ font-size: 16px; font-family: sans-serif; width: 100%; min-height: 100%; margin: 0; }
+body { font-family: 'Quattrocento', serif; padding-top: 5px; width: 95%; max-width: 810px; height: 100%; margin: 0px auto; }
+.todo { width: 90%; height: 75%; margin: 0 auto; background-image: linear-gradient(to bottom, rgba(220, 20, 60,0.85), rgba(237,20,61,0.7), rgba(250, 128, 114,1)); /*crimson ,rgba(237,20,61,0.7), Salmon*/ background-size: 100% 200%; background-repeat: no-repeat; border-radius: 15px; padding: 10px 10px 25px 10px; }
+
+h1, h2, p { color: #d5dec2; text-align: center; }
+h1, .results h2, .add-a-question h2 { font-family: 'Courgette', cursive; }
+h1 { margin-top: 7px; }
+.add-a-question h2 { color: #797b76; }
+button { cursor: pointer; }
+
+.quiz, .results, .add-a-question { width: 85%; margin: 0px auto; }
+.quiz { border: 1px solid #a3e812; border-radius: 10px 10px 0 0; }
+.results { border-width: 1px; border-style: solid; border-color: transparent #a3e812 #a3e812 #a3e812; border-radius: 0px 0px 10px 10px; background-color: rgb(243,243,168,0.20); }
+.quiz h2, .results h2 { font-size: 1.2rem; margin-bottom: 20px; }
+.quiz p { text-align: right; padding-right: 40px; }
+.quiz div { padding: 5px; margin-left: 20px; }
+.quiz span { color: #d5dec2; }
+.quiz button { background-color: #d5dec2; border-radius: 5px; padding: 5px; margin-left: 40px; margin-top: 10px; }
+
+.results p { font-weight: bold; text-align: center; padding: 20px; }
+.correct { color: green; text-shadow: 2px 2px #ee8f00; }
+.incorrect { color: red; text-shadow: 2px 2px #ee8f00; }
+
+
+.add-a-question input { display: block; border-radius: 8px; padding: 3px; margin-bottom: 3px; width: 100%; }
+.add-a-question label { margin-left: 80px; }
+.add-a-question select { width: 42%; border-radius: 5px; }
+.add-a-question button { display: block; width: 150px; background-color: #d5dec2; border-radius: 5px; padding: 5px; margin: 15px auto 25px auto; }
+.add-a-question h2 { margin-bottom: 5px; }
+.add-a-question small, .add-a-question span { color: rgba(116,140,64,0.6); padding: 5px; border: 1px solid white; cursor: pointer; }
+.add-a-question small:hover, .add-a-question span:hover { color: rgba(116,140,64,1); font-size: 1em; font-weight: bold; border: none; }
+.add-a-question p { margin-bottom: 30px; margin-top: 5px; }
+.add-a-question h5, .add-a-question h6 { color: #797b76; }
+.add-a-question h5 { margin: 10px 0 25px 0; }
+.add-a-question h5:last-of-type { margin: 10px;}
+.add-a-question h6 { margin: 8px 0 8px 15px; }
+.add-a-question section span { padding: 1px 3px; margin-left: 15px; }
+
+header, footer { background-color: #748c40; width: 92%; margin: 30px auto 50px auto; border-radius: 15px; }
+header { height: 190px; }
+footer { height: 265px; }
+header h1 { color: #f3f3a8; font-size: 2.3rem; text-shadow: 1px 1px rgb(237,20,61,0.2); padding: 10px 0; margin-bottom: 10px; }
+header form { float: right; margin-right: 10px; margin-bottom: 0px; }
+header form input { padding: 2px; border-radius: 5px; }
+header form input:not([type="text"]) { background-color: #f3f3a8; cursor: pointer; }
+.remember { margin-left: 25px; margin-bottom: 5px; }
+.forget { color: #d5dec2; }
+footer ul { list-style: none; margin: 0px; padding-top: 20px; }
+
+footer ul li { padding-right: 15px;  padding-bottom: 5px; display: inline-block; }
+footer ul li a { color: salmon; text-shadow: 1px 1px yellow; text-decoration: none; }
+footer ul li a:hover { text-decoration: underline; }
+footer p { font-family: 'Courgette', cursive; font-weight: bold; text-align: left; padding-left: 15px; margin-top: 5px; }
+
+.flex { display: flex; flex-wrap; wrap; }
+
+.nav-flex { justify-content: space-around; }
+
+@media only screen and (max-width: 357px) {
+	footer { height: 315px; }
+}
+@media only screen and (min-width: 448px) {
+	footer { height: 235px; }
+}
+@media only screen and (min-width: 520px) {
+	footer { height: 200px; }
+}
+@media only screen and (min-width: 632px) {
+	header { height: 200px; }
+	header h1 { font-size: 2.8em; }
+	footer { height: 190px; }
+}
+@media only screen and (min-width: 772px) {
+	header { height: 225px; }
+	header h1 { font-size: 3.4em; }
+	footer { height: 160px; }
+}

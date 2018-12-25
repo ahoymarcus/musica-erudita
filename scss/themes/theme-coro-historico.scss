@@ -1,0 +1,47 @@
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+/* Erudita Histórico */
+.background-primary-historico {
+	background-color: cadetBlue;
+}
+.color-primary-historico {
+	color: mintCream;
+}
+.background-secondary-historico {
+	background: linear-gradient(linen, aliceblue, linen); 
+}
+.color-secondary-historico {
+	/*Title*/
+	color: #556055; /*verde-insaturado-médio*/
+}
+.background-tertiary-historico {
+	background: linear-gradient(#e0c2a5, aliceblue 98%, #796e62);/*linear-gradient(#daac81, aliceblue, aliceblue 99%, #6f5c49)*/
+}
+.color-tertiary-historico {
+	/*Paragraph*/
+	color: #556055; /*verde-insaturado-médio*/
+	text-shadow: 0 0 4px lightsalmon; /*hover= none*/
+}
+.background-quaternary-historico {
+	background-color: #074a4c; /*verde-saturadoPlus-darkPlus*/
+}
+.color-quaternary-historico {
+	/*Link: cor padrão do navegador*/
+}
+.background-quinary-historico {
+	
+}
+.background-header-historico {
+	/*Header*/
+	background: linear-gradient(paleGoldenRod, white, paleGoldenRod);
+}
+.color-header-historico {
+	/*Header*/
+	color: #516b51; /*verde-insaturado-dark*/
+}
+
+
+

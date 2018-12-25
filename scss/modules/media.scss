@@ -1,0 +1,30 @@
+/*Media Object Modules*/
+.media, .media-body { overflow: hidden; position: relative; }
+
+.media {  
+	& figure { margin: 16px 0 16px 20px; }
+	& img { width: 95%; height: 264px; }
+	.img-retrato { height: 95%; }
+	
+	
+	.media-item  { 
+	  float: left; 
+		margin-right: 10px; 
+	  @include extra-small-only {
+			float: none;
+		}
+	}
+	.media-item i { color: #6b7782; /*azul-insaturado-médio-#6b778*/ font-size: 3.5em; }
+	
+}
+.media-desloc-top { position: relative; bottom: 16px; }
+.media-desloc-bot-left { position: relative; top: 40px; left: 20px; }
+.media-pad { padding: 30px 0 30px 0; }
+
+
+@media (min-width: 68em) { /*1088px*/
+	.media-body p iframe, .media img { width: 90%; height: 250px; }
+}
+
+
+

@@ -1,0 +1,8 @@
+/*Mask Modules*/
+.mask { 
+	position: relative; 
+	&:before { position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ""; }
+}
+
+
+.mask-primary:before { background: orange; opacity: 0.3; }

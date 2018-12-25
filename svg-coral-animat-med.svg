@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
+  <title>SVG - Musica Erudita_site</title>
+  <desc>Apresentação do Coro Sinfônico Comunitário da UnB - Requiem, 1º semestre de 2018</desc>
+ 
+  
+  <line x1="10" y1="20" x2="950" y2="20" stroke="#e8ded9" stroke-width="4" />
+	<line x1="10" y1="50" x2="950" y2="50" stroke="#e8ded9" stroke-width="4" />
+	<line x1="10" y1="80" x2="950" y2="80" stroke="#e8ded9" stroke-width="4" />
+	<line x1="10" y1="110" x2="950" y2="110" stroke="#e8ded9" stroke-width="4" />
+  <line x1="10" y1="140" x2="950" y2="140" stroke="#e8ded9" stroke-width="4" />
+	<!--#bfa195-->
+	
+	
+	<!--Semínima tipo-04-->
+	<path d="M 430 80 L 430 90 430 100 C 410 95 420 111 431 100" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 1 repeatCount="indefinite"-->
+	
+	<!--Colcheia tipo-02-->
+	<path d="M 520 110 L 510 105 L 510 115 510 125 C 488 124 500 135 511 125" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 2 repeatCount="indefinite"-->
+	
+	<!--Semibreve tipo-02-->
+	<ellipse cx="610" cy="90" rx="5" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			
+		/>
+	</ellipse><!-- 3 repeatCount="indefinite"-->
+	
+	<!--Semínima tipo-03-->
+	<path d="M 700 55 L 700 65 700 75 C 680 70 690 85 701 75" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 4 repeatCount="indefinite"-->
+	
+	<!--Semínima tipo-01-->
+	<path d="M 780 55 L 780 65 780 75 Q 760 80 783 80" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			
+		/>
+	</path><!-- 5 repeatCount="indefinite"-->
+	
+	<!--Semibreve tipo-01-->
+  <ellipse cx="860" cy="20" rx="6" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			
+		/>
+	</ellipse><!-- 6 repeatCount="indefinite"-->
+	
+	<!--Semínima tipo-03-->
+	<path d="M 960 28 L 960 38 960 48 C 940 43 950 58 961 48" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 7 -->
+	
+	<!--Colcheia tipo-01-->
+	<path d="M 1050 25 L 1040 20 L 1040 30 1040 40 C 1020 35 1030 50 1041 40" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 8 -->
+	
+	<!--Semínima tipo-02-->
+	<path d="M 1150 75 L 1150 95 Q 1130 100 1153 100" stroke="black" stroke-width="5" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 9 -->
+	
+	<!--Colcheia tipo-01-->
+	<path d="M 1240 110 L 1230 105 L 1230 115 1230 125 C 1210 120 1220 135 1231 125" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 10 -->
+	
+	<!--Semibreve tipo-01-->
+  <ellipse cx="1340" cy="130" rx="6" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</ellipse><!-- 11 -->
+	
+	<!--Semínima tipo-04-->
+	<path d="M 1450 80 L 1450 90 1450 100 C 1430 95 1440 111 1451 100" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 12 -->
+	
+	<!--Colcheia tipo-02-->
+	d="M 520 110 L 510 105 L 510 115 510 125 C 488 124 500 135 511 125"
+	<path d="M 1560 110 L 1550 105 L 1550 115 1550 125 C 1528 124 1540 135 1551 125" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 13 -->
+	
+	<!--Semibreve tipo-02-->
+	<ellipse cx="1670" cy="90" rx="5" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</ellipse><!-- 14 -->
+	
+	<!--Semínima tipo-03-->
+	d="M 700 55 L 700 65 700 75 C 680 70 690 85 701 75"
+	<path d="M 1770 55 L 1770 65 1770 75 C 1750 70 1760 85 1771 75" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 15 -->
+	
+	<!--Semínima tipo-01-->
+	d="M 780 55 L 780 65 780 75 Q 760 80 783 80"
+	<path d="M 1870 55 L 1870 65 1870 75 Q 1850 80 1873 80" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 16 -->
+	
+	<!--Semibreve tipo-01-->
+  <ellipse cx="1970" cy="20" rx="6" ry="4" stroke="black" stroke-width="4" fill="#fbfba9">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</ellipse><!-- 17 -->
+	
+	<!--Semínima tipo-03-->
+	d="M 960 28 L 960 38 960 48 C 940 43 950 58 961 48"
+	<path d="M 2060 28 L 2060 38 2060 48 C 2040 43 2050 58 2061 48" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 18 -->
+	
+	<!--Colcheia tipo-01-->
+	d="M 1050 25 L 1040 20 L 1040 30 1040 40 C 1020 35 1030 50 1041 40"
+	<path d="M 2160 25 L 2150 20 L 2150 30 2150 40 C 2130 35 2140 50 2151 40" stroke="black" stroke-width="5" fill="black">
+	  <animateMotion
+		  from="0,0"
+			to="-1750,0"
+			begin="0s"
+			dur="45s"
+			fill="freeze"
+			repeatCount="indefinite"
+		/>
+	</path><!-- 19 -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</svg>
+
+
+
+
+

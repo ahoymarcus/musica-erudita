@@ -1,0 +1,40 @@
+/***************************
+****************************
+Reset Styles
+****************************
+***************************/
+/*Mudando a importação do arq normalize para o ponto de entrada em styles.scss*/
+/*@import 'normalize.css';*/
+
+html { box-sizing: border-box; 
+
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+body { 
+	color: black; font-family: 'Quattrocento', serif; font-weight: normal; 
+	h1, h2 { font-family: 'Courgette', cursive; }
+	h1, h2, h4 { font-weight: bold; }
+	a { color: black; font-weight: bold; text-decoration: none; }
+	a:hover { text-decoration: underline; }
+	iframe { width: 98%; }
+	video { width: 100%; margin: 0 auto; }
+	blockquote {
+	  font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 38px;
+		max-width: 320px;
+		margin: 0 auto;
+	}
+}
+
+
+
+
+

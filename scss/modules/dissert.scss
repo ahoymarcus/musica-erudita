@@ -1,0 +1,72 @@
+/*Dissertation Module*/
+.dissert { padding: 30px 0 50px 0; }
+.dissert-title { text-align: center; } 
+.dissert-content {
+	text-align: justify;
+	line-height: 25px;
+	@include medium-and-above {
+		& {
+			line-height: 29px; 
+		}
+	}
+	
+}
+.dissert-title-pad-top { padding-top: 30px; }
+.dissert-content-pad-top { padding-top: 5px; }
+
+
+.dissert-dt { font-size: 1.5em; }
+
+.dissert-span { width: 80%; margin: 0 auto; text-align: justify; position: relative; bottom: 42px; left: 22px; }
+
+.dissert-hover { color: #bbb090; /*#6f560c*/ text-shadow: 2px 2px #c58c75; font-size: 2.5em; }
+.dissert-hover:hover { text-shadow: 3px 3px #46291f; /*4px 4px #ab7969*/ }
+
+
+.dissert-mundo-primary {
+	background-color: #87a9b5;
+}
+.dissert-mundo-title { color: #1b231b; }
+.dissert-mundo-subtitle { color: aliceBlue; font-weight: bold; text-shadow: 0.2px 0.2px #4848f9; }
+.dissert-mundo-block, .dissert-mundo-span, .dissert-brasil-fig { color: #516b51; text-shadow: 0.5px 0.5px burlywood; }
+
+
+.dissert-brasil-primary {
+	background-color: #589a58;
+}
+.dissert-brasil-title { color: black; }
+.dissert-brasil-subtitle { color: darkkhaki; font-weight: bold; text-shadow: 0.5px 0.5px darkolivegreen; }
+.dissert-brasil-block, .dissert-brasil-span, .dissert-brasil-fig { color: darkkhaki; text-shadow: 0.5px 0.5px aliceblue; }
+
+
+.dissert-historico-primary { background: linear-gradient(#ded7d0, aliceblue, linen); }
+.dissert-historico-secondary { 
+  background: linear-gradient(#e0c2a5, aliceblue 99%, #796e62); 
+  @include medium-and-above {
+	  & {
+		  background: linear-gradient(#e0c2a5, aliceblue 97.5%, #796e62);
+		}
+	}
+}
+.dissert-historico-ternary { background-color: antiquewhite; }
+.dissert-historico-block, .dissert-historico-span, .dissert-historico-fig { text-shadow: 0.5px 0.5px #c58c75; }
+
+[class="fas fa-at"] { margin-top: 30px; }
+[class*="fab "] {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	@include medium-and-above {
+	  & { 
+		  margin-bottom: 70px;
+	  }
+	}
+}
+
+
+
+
+
+
+
+
+

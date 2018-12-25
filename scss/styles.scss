@@ -1,0 +1,47 @@
+/*
+	Note: 
+	You need to import the variables (and @mixin) first so that they are available to the code that is added later.
+*/
+
+
+
+
+/*
+	Attention: This step brings the base style sheets into style.scss in the order that they are listed.
+
+	"By breaking your CSS file out into modular SCSS partials, you have improved the readability and maintainability for yourself and the team. You have also streamlined these files into one HTTP requested CSS files using Sass".
+	-> sass input.scss output.css
+	-> sass --watch input.scss:output.css
+*/
+@import "base/normalize";
+@import "base/base";
+@import "base/media-queries";
+
+@import "layouts/layout";
+
+@import "modules/bg-image";
+@import "modules/buttons";
+@import "modules/header";
+@import "modules/hero";
+@import "modules/logo";
+@import "modules/media";
+@import "modules/social";
+@import "modules/nav";
+@import "modules/frame";
+@import "modules/mask";
+@import "modules/board";
+@import "modules/svgs";
+@import "modules/tooltip";
+@import "modules/intro";
+@import "modules/dissert";
+@import "modules/feature";
+@import "modules/tag";
+@import "modules/gallery";
+@import "modules/footer";
+
+
+@import "themes/theme-coro-primary";
+@import "themes/theme-coro-mundo";
+@import "themes/theme-coro-brasil";
+@import "themes/theme-coro-historico";
+

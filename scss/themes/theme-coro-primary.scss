@@ -1,0 +1,36 @@
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+.background-primary {
+	/*dispositivos menores*/
+	background-image: linear-gradient(#2c3c3c, lightgoldenrodyellow 20%,#2c3c3c);
+	/*dispositivos maiores*/
+	/*background-image: linear-gradient(rgba(44, 60, 60,0.6), lightgoldenrodyellow 20%, rgba(44, 60, 60,0.4), rgba(185, 156, 118, 0.8))*/
+}
+.color-primary {
+	color: black; text-shadow: 1px 1px #eae7ca;
+}
+.background-secondary {
+	background-color: Khaki;
+}
+.color-secondary {
+	color: black;
+}
+.color-tertiary {
+	color: black; text-shadow: 0 0 0.3px lightsalmon;
+}
+.color-quaternary {
+	color: lightsalmon;
+}
+.background-nav {
+	/*Menu Navegação do Site*/
+	background-color: aliceblue;
+}
+.color-nav {
+	/*Menu de navagação interna da página*/
+	color: #556055; /*verde-insaturado-médio*/
+	text-shadow: 0 0 8px goldenrod, 0 0 16px #ba613b;
+}
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Música Erudita: um jogo de trívia</title>
+	<meta name="description" content="Jogo de Trívia com conhecimentos da Música Erudita, da História da Música Erudita, da Orquestra Sinfônica e dos Compositores da Música Erudita no Mundo e no Brasil." />
+	
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+	
+	<link 
+	rel="stylesheet" 
+	href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" 
+	crossorigin="anonymous"
+	/>
+
+	<link rel="stylesheet" type="text/css" href="css/coral-musicTrivia.css" />
+
+</head>
+<body>
+
+<header>
+	<h1>Welcome to our Music Trivia<span></span></h1>
+	<form>
+		<div class="remember">
+		
+			<input id="entername" type="text" placeholder="Enter your name..." required />
+			<input id="submitname" type="submit" value="Hello!!!" />
+		</div>
+		<div class="forget">
+			<label for="forgetname">Would like to change user?</label>
+			<input id="forgetname" type="reset" value="See ya!!!" />
+		</div>
+	</form>
+</header>
+
+<div class="todo">
+	<h1>Let's see what you do really know?</h1>
+	
+	<div id="quiz" class="quiz">
+		<h2 id="question"></h2>
+		<div><input type="radio" name="choices" value="A"><span id="choiceA"></span></div>
+		<div><input type="radio" name="choices" value="B"><span id="choiceB"></span></div>
+		<div><input type="radio" name="choices" value="C"><span id="choiceC"></span></div>
+		<div><input type="radio" name="choices" value="D"><span id="choiceD"></span></div>
+		<button>Submit</button>
+		<p>Question <span class="current"></span> of <span class="total"></span></p>
+	</div>
+	
+	<div class="results">
+		<h2>Your Score: <span class="score"></span> out of <span class="total"></span></h2>
+	</div>
+	
+	<p><a class="retake" href="#quiz">Retake the quiz!</a></p>
+	<p class="contribute"><a href="#add-a-question">Contribute to questions set!</a></p>
+	
+</div> <!-- /.todo -->	
+
+	<div id="add-a-question" class="add-a-question">
+		<form id="add-question">
+			<h2>Add a Question:</h2>
+			<p><small>or Reset the Quiz list!</small></p>
+			<input id="full-question" type="text" name="question" placeholder="Full Question" />
+			<input id="choice-a" type="text" name="choiceA" placeholder="Choice A" />
+			<input id="choice-b" type="text" name="choiceB" placeholder="Choice B" />
+			<input id="choice-c" type="text" name="choiceC" placeholder="Choice C" />
+			<input id="choice-d" type="text" name="choiceD" placeholder="Choice D" />
+			<label>Correct Answer:</label>
+			<select form="add-question" name="correct" placeholder="Correct Answer">
+				<option value="A">Choice A</option>
+				<option value="B">Choice B</option>
+				<option value="C">Choice C</option>
+				<option value="D">Choice D</option>
+			</select>
+			<button>Submit Question</button>
+			<p><a class="retake" href="#quiz">Take the quiz!</a></p>
+		</form>	
+		<hr />
+		<section id="question-list">
+			<!--Question list with delete options will be populated -->
+			
+		</section>
+	</div>
+
+<footer>
+	<ul class="flex nav-flex">
+		<li><a href="index.html">A Música Erudita (Home)</a></li>
+		<li><a href="coral-mundo.html">A Música Erudita no Mundo</a></li>
+		<li><a href="coral-brasil.html">A Música Erudita no Brasil</a></li>
+	</ul>
+	<ul class="flex nav-flex">
+		<li><a href="coral-historico.html">Pequeno Histórico da Música Erudita</a></li>
+		<li><a href="coral-vozes.html">Vozes no Coral</a></li>
+		<li><a href="musicTriviaGameApp.html">Music Trivia Game App</a></li>
+	</ul>
+	<ul class="flex nav-flex">
+		<li><a href="coral-orquestra.html">Pequena Orchestra-app</a></li>
+		<li><a href="index.html">Musicpad App</a></li>
+	</ul>
+	<p><small>MaisMúsica</small></p>
+</footer>
+
+<script type="text/javascript" src="js/questionsMusicTrivia.js"></script>
+
+<script type="text/javascript" src="js/coral-musicTrivia.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edx - Advanced CSS Concepts</title>
+	<meta name="description" content="Projeto final do curso Advanced CSS Concepts da Edx." />
+	
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+	
+    <!-- Nota: alterando a chamada para o resultado do arq styles.scss-->
+	<!-- <link rel="stylesheet" href="stylesheet-de-backup-sem-scss.css" type="text/css">  -->
+	<link rel="stylesheet" href="css/styles.css" type="text/css"> 
+	<link 
+		rel="stylesheet" 
+		href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+		crossorigin="anonymous"
+	/>
+	
+  </head>
+  <body>
+    <header class="header-primary">
+        <div class="container">
+        
+			<a class="logo logo-primary">
+				<picture>
+					<source type="image/svg+xml" srcset="multimidia/logo-svg.svg">
+					<img src="multimidia/logo-png.png" />
+				</picture>
+			</a>
+			<div class="btn btn-primary btn-toggle-menu">Menu</div>
+			<nav class="nav nav-primary">
+				<ul>
+					<li><a href="#" class="btn btn-nav">Link with a LONG name 1</a></li>
+					<li><a href="#" class="btn btn-nav">Link 2</a></li>
+					<li><a href="#" class="btn btn-nav">Link with a LONG name 3</a></li>
+					<li><a href="#" class="btn btn-primary">Link Btn</a></li>
+				</ul>
+			</nav>
+        </div>
+    </header>
+    <main>
+		
+      <section class="hero hero-quinary bg-image">
+		<img src="multimidia/arc-art-bass.jpg" alt="imagem de um violino sobre uma partitura" />
+        <div class="container">
+			<div class="hero-body">
+				<!--Hero Primary Title Content-->
+			  <h1 class="hero-title">Projeto Final de Curso</h1>
+			  <h4 class="hero-subtitle">Curso da Edx em CSS avançado: <q>Advanced CSS Concepts by Microsoft</q> 
+			  </h4>
+			  <button class="btn btn-hero">Button Text</button>
+			</div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+              <div class="col-1-3 pull-right-sm">
+                  <div class="frame frame-primary mask mask-primary"><img src="multimidia/aerial-view-orchestra.jpg" alt="vista aérea dos instrumentos de uma orquestra" /></div>
+              </div>
+              <div class="col-2-3 frame-content">
+                <h3>Advanced CSS Concepts</h3> 
+                <h5>
+					<ul>
+						<li>Módulo 1: Construindo o Layout Responsivo com Media Queries
+							<ul>
+								<li>Planejamento e estudo de documentos (Wireframe, Style Guide e Redline)</li>
+								<li>Construindo um sistema manual de grids responsivos</li>
+							</ul>
+						</li>
+						<li>Módulo 2: CSS Modular
+							<li>modularizando o projeto de estilo</li>
+						</li>
+						<li>Módulo 3: Preprocessador SASS
+							<ul>
+								<li>Estudo das principais ferramentas</li>
+								<li>Configuração básica</li>
+								<li>Compilação para o arquivo CSS</li>
+								<li>Estudo de Variáveis, Funções e Mixins no SASS</li>
+							</ul>
+						</li>
+						<li>Módulo 4: Teste e Acessibilidade de Crossbrowsers
+							<ul>
+								<li>Inserindo o Sistema Flexbox</li>
+								<li>Introdução ao trabalho com Imagens SVG</li>
+							</ul>
+						</li>
+					</ul>
+				</h5>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="feature feature-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-1-3 remove-gutter-xs">
+              <div class="media">
+                <div class="media-feature feature-1">
+					<img src="multimidia/orquestra-5.jpg" alt="imagem de uma orquestra" />
+					<h3 class="tag tag-feature-1">Título de Conteúdo</h3>
+				</div>
+				<div class="media-body">
+					<h2 class="feature-title">Título de Conteúdo Terciário</h2>
+					<h4 class="feature-subtitle">Curabitur ante ligula, aliquet a lobortis in, pulvinar non magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. <a href="#">Leia mais...</a></h4>
+				</div>
+              </div>
+            </div>
+            <div class="col-1-3 remove-gutter-xs">
+              <div class="media">
+                <div class="media-feature feature-1">
+					<img src="multimidia/partitura-3.jpg" alt="imagem de uma folha de partitura do Requiem de Mozart" />
+					<h3 class="tag tag-feature-1">Título de Conteúdo</h3>
+				</div>
+				<div class="media-body">
+					<h2 class="feature-title">Título de Conteúdo Terciário</h2>
+					<h4 class="feature-subtitle">Maecenas sit amet velit non lacus aliquam dictum vitae eu augue. Qui in appetere deserunt posidonium, est amet reformidans an. Ne vis salutandi interpretaris. Ei veniam torquatos cum. Ignota legendos liberavisse ad pro. <a href="#">Leia mais...</a></h4>
+				</div>
+              </div>
+            </div>
+            <div class="col-1-3 remove-gutter-xs">
+              <div class="media">
+                <div class="media-feature feature-1">
+					<img src="multimidia/partitura-2.jpg" alt="imagem de uma folha de partitura de Bach" />
+					<h3 class="tag tag-feature-1">Título de Conteúdo</h3>
+				</div>
+				<div class="media-body">
+					<h2 class="feature-title">Título de Conteúdo Terciário</h2>
+					<h4 class="feature-subtitle">Ut id mauris urna. In sed porttitor lectus. Suspendisse dignissim dolor id lectus pellentesque, eu bibendum lectus malesuada. Phasellus volutpat sollicitudin suscipit. Donec id libero nisl. Praesent gravida purus vel euismod facilisis. <a href="#">Leia mais...</a></h4>
+				</div>
+              </div>
+            </div>
+          </div>
+		  <!--<div class="row">
+            <div class="col-1-3 remove-gutter-xs">
+              <div class="media">
+                <div class="media-feature feature-2">
+					<img src="multimidia/acoustic-background-band-2.jpg" alt="imagem de um violino" />
+					<h3 class="tag tag-feature-2">Título de Conteúdo</h3>
+				</div>
+				<div class="media-body">
+					<h2 class="feature-title">Título de Conteúdo Terciário</h2>
+					<h4 class="feature-subtitle">Curabitur ante ligula, aliquet a lobortis in, pulvinar non magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. <a href="#">Leia mais...</a></h4>
+				</div>
+              </div>
+            </div>
+            <div class="col-1-3 remove-gutter-xs">
+              <div class="media">
+                <div class="media-feature feature-2">
+					<img src="multimidia/orquestra-2.jpg" alt="imagem de uma folha de partitura do Requiem de Mozart" />
+					<h3 class="tag tag-feature-2">Título de Conteúdo</h3>
+				</div>
+				<div class="media-body">
+					<h2 class="feature-title">Título de Conteúdo Terciário</h2>
+					<h4 class="feature-subtitle">Maecenas sit amet velit non lacus aliquam dictum vitae eu augue. Qui in appetere deserunt posidonium, est amet reformidans an. Ne vis salutandi interpretaris. Ei veniam torquatos cum. Ignota legendos liberavisse ad pro. <a href="#">Leia mais...</a></h4>
+				</div>
+              </div>
+            </div>
+            <div class="col-1-3 remove-gutter-xs">
+              <div class="media">
+                <div class="media-feature feature-2">
+					<img src="multimidia/orquestra-6.jpg" alt="imagem de uma folha de partitura de Bach" />
+					<h3 class="tag tag-feature-2">Título de Conteúdo</h3>
+				</div>
+				<div class="media-body">
+					<h2 class="feature-title">Título de Conteúdo Terciário</h2>
+					<h4 class="feature-subtitle">Ut id mauris urna. In sed porttitor lectus. Suspendisse dignissim dolor id lectus pellentesque, eu bibendum lectus malesuada. Phasellus volutpat sollicitudin suscipit. Donec id libero nisl. Praesent gravida purus vel euismod facilisis. <a href="#">Leia mais...</a></h4>
+				</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+      <section class="hero hero-quaternary bg-image">
+		<img src="multimidia/orquestra-6-big.jpg" alt="outra imagem de uma orquestra" />
+		<div class="container">
+			<div class="hero-body">
+				<h1 class="hero-title">Conteúdo do Título</h1>
+				<h4 class="hero-subtitle">Cum veri persecuti ad, ea explicari persecuti sed. Soluta consequuntur mei cu, nec id omnes persequeris, id cum prima iudicabit. Cetero instructior an ius. Postulant dissentias necessitatibus eos ex, semper dolorem delicata usu ea. Ut id mauris urna. In sed porttitor lectus.</h4>
+			</div>  
+		</div> 
+      </section>
+	  <section class="media media-secondary">
+        <div class="container">
+			<div class="row">
+			  <div class="col-1-2">
+				<div class="media">
+					<div class="media-item">
+						<i class="fas fa-music fa-8x"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Ipsum dolor sit amet</h4>
+						<figure>
+							<img src="multimidia/orquestra-2.jpg" alt="imagem de uma orquestra" />
+						</figure>
+					</div>
+				</div>
+			  </div>
+			  <div class="col-1-2 pull-right-sm">
+				<div class="media">
+					<div class="media-item">
+						<i class="fab fa-itunes fa-8x"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Concerto de Inverno</h4>
+						<p>Fabellas vituperata mediocritatem eam cu, sed cu viderer detraxit, dicta numquam dolorum vel. Sonet detraxit cu mel, ex pri utamur feugait. Mea ad constituto conclusionemque, eu sit rebum laboramus democritum</p>
+					</div>
+				</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-1-2">
+				<div class="media">
+					<div class="media-item">
+						<i class="fas fa-music fa-8x"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading"><cite> Beethoven 9</cite></h4>
+						<p><iframe width="320" height="204" src="https://www.youtube.com/embed/rOjHhS5MtvA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+						<p><small>Publicado no canal Youtube: Chicago Symphony Orchestra - Riccardo Muti - Chicago Symphony Orchestra</small></p>
+					</div>
+				</div>
+			  </div>
+			  <div class="col-1-2 pull-right-sm">
+				<div class="media">
+					<div class="media-item">
+						<i class="fab fa-itunes fa-8x"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading"><cite>mozart requiem karajan</cite></h4>
+						<p><iframe width="320" height="204" src="https://www.youtube.com/embed/ia8ceqIDSJw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+						<p><small>Publicado no canal Youtube: cagin</small></p>
+					</div>
+				</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-1-2">
+				<div class="media">
+					<div class="media-item">
+						<i class="fas fa-music fa-8x"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading"><cite>Tchaikovsky, Abertura 1812, Op.49</cite></h4>
+						<p><iframe width="320" height="204" src="https://www.youtube.com/embed/2EgOP6LLaFc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+						<p><small>Publicado no canal Youtube: Orquestra Sinfônica Heliópolis - Institutobaccarelli</small></p>
+					</div>
+				</div>
+			  </div>
+			  <div class="col-1-2 pull-right-sm">
+				<div class="media">
+					<div class="media-item">
+						<i class="fab fa-itunes fa-8x"></i>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Título de Conteúdo Quaternário</h4>
+						<p>Qui bin illum falli nihil. Fabellas vituperata mediocritatem eam cu, sed cu viderer detraxit, dicta numquam dolorum vel. Sonet detraxit cu mel, ex pri utamur feugait. Mea ad constituto conclusionemque, eu sit rebum laboramus democritum. Ei has brute electram voluptatum, timeam salutatus adolescens ad has, ea ius clita fierent nominati.</p>
+						<p><small></small></p>
+					</div>
+				</div>
+			  </div>
+			</div>
+  	    </div>
+      </section>
+	  <section class="gallery gallery-primary">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/acoustic-background-band-2.jpg">
+						<img src="multimidia/acoustic-background-band-2.jpg" alt="image of a acoustic violin" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/aerial-view-orchestra.jpg">
+						<img src="multimidia/aerial-view-orchestra.jpg" alt="aerial view orchestra" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/arc-art-bass.jpg">
+						<img src="multimidia/arc-art-bass.jpg" alt="arc and violion art image" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/hero-sm.jpg">
+						<img src="multimidia/hero-sm.jpg" alt="imagem de fundo com ingredientes de cozinha" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/feature-1.jpg">
+						<img src="multimidia/feature-1.jpg" alt="imagem de uma horta" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/feature-3.jpg">
+						<img src="multimidia/feature-3.jpg" alt="imagem da preparação de massa caseira" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/feature-3.jpg">
+						<img src="multimidia/feature-1.jpg" alt="imagem da uma orta" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/acoustic-background-band-2.jpg">
+						<img src="multimidia/acoustic-background-band-2.jpg" alt="image of a acoustic violin" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/orquestra-5.jpg">
+						<img src="multimidia/orquestra-5.jpg" alt="imagem de uma orquestra" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/aerial-view-orchestra.jpg">
+						<img src="multimidia/aerial-view-orchestra.jpg" alt="aerial view orchestra" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/cooking.jpg">
+						<img src="multimidia/cooking.jpg" alt="imagem de um homem cozinhando" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/feature-3.jpg">
+						<img src="multimidia/feature-3.jpg" alt="imagem da preparação de massa caseira" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/hero-sm.jpg">
+						<img src="multimidia/hero-sm.jpg" alt="imagem de fundo com ingredientes de cozinha" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esset</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/arc-art-bass.jpg">
+						<img src="multimidia/arc-art-bass.jpg" alt="arc and violion art image" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/aerial-view-orchestra.jpg">
+						<img src="multimidia/aerial-view-orchestra.jpg" alt="aerial-view-orchestra" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+				<div class="col-1-4">
+					<a target="_blank" href="multimidia/acoustic-background-band-2.jpg">
+						<img src="multimidia/acoustic-background-band-2.jpg" alt="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat" />
+					</a>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+				</div>
+			</div>
+		</div>	
+	  </section>
+	  <section class="background-tertiary">
+		 <div class="container"><strong>MORE CONTENT</strong></div>
+	  </section>
+	  
+		<nav class="nav nav-secundary background-primary">
+			<ul class="flex-container flex-centered flex-justify-between">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>
+		</nav>
+		
+	 
+    </main>
+    <footer class="background-quaternary">
+      <div class="container">
+        <div class="row flex-container flex-footer">
+			<div class="col-1-3">
+				<h2>logotipo</h2>
+			</div>
+			<div class="col-1-4 coluna-vazia">
+				<!--<p><i class="fas fa-map-marker"></i><small>Company Name 5555 Address St. #555 City, State 55555</small></p>-->
+			</div>
+			<div class="col-1-6 coluna-vazia">
+				<!--<p><i class="fas fa-phone-square"></i><small>(00) 0000- 0000</small></p>-->
+			</div>
+			<div class="col-1-4 social social-secundary">
+				<div class="container">					
+					<ul>
+						<li><a href="#"><img src="multimidia/facebook.png" alt="facebook" /></a></li>
+						<li><a href="#"><img src="multimidia/github.png" alt="github" /></a></li>
+						<li><a href="#"><img src="multimidia/gplus.png" alt="google-plus" /></a></li>
+						<li><a href="#"><img src="multimidia/rss.png" alt="rss" /></a></li>
+						<li><a href="#"><img src="multimidia/twitter.png" alt="rwitter" /></a></li>
+					</ul>				
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		  <div class="col-2-3">
+			  <ul>
+				  <li><a href="coral-mundo.html" class="page btn btn-nav">Música Erudita no Mundo</a></li>
+					<li><a href="coral-brasil.html" class="page btn btn-nav">Música Erudita no Brasil</a></li>
+					<li><a href="coral-historico.html" class="page btn btn-nav">Pequeno Histórico da Música Erudita</a></li>
+					<!--<li><a href="" class="btn btn-nav">Vozes no Coral</a></li>-->
+					<li><a href="musicTriviaGameApp.html" class="page btn btn-nav">Music Trivia Game App</a></li>
+					<li><a href="coral-orquestra.html" class="page btn btn-nav">Pequena Orchestra App</a></li>
+					<li><a href="#" class="btn btn-secondary">Link-de-Teste</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-1-3 coluna-vazia">
+				<div class="container"><!-- do not collapse --></div>
+			</div>
+			<div class="col-1-4">
+				<div class="container"><small>Copyright</small></div>
+			</div>
+			<div class="col-1-6">
+				<div class="container"><small>Privacy Policy</small></div>
+			</div>
+			<div class="col-1-4">
+				<div class="container"><small>Terms of Use</small></div>
+			</div>
+		</div>
+      </div>
+    </footer>
+	
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

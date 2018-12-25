@@ -1,0 +1,459 @@
+/*Base and Normalise */
+* { box-sizing: border-box;	}
+
+
+/*
+	Layout
+	Note:
+		All these columns should be floating to the left, and have a padding of 15px.
+		Each row should be wrapped in a 'div'. The number of columns inside a row should always add up to 12.
+*/
+[class*='col-'] {
+	float: left;
+	padding: 15px;
+	/*border: 2px dashed rgb(37,43,76);*/
+	border: 2px dashed rgba(37,43,76,0.5); /*#252b4c*/
+	 
+}
+[class*'col-']::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.clearfix { content: ""; clear: both; display: table; }
+
+
+.col-1-12 {width: 8.33%;}
+.col-1-6 {width: 16.66%;}
+.col-1-4 {width: 25%;}
+.col-1-3 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-1-2 {width: 50%;}
+.col-7-partes {width: 58.33%;}
+.col-2-3 {width: 66.66%;}
+.col-3-4 {width: 75%;}
+.col-10-partes {width: 83.33%;}
+.col-11-partes {width: 91.66%;}
+.col-1 {width: 100%;}
+
+html { font-family: "Lucida Sans", sans-serif; font-size: 16px; background: #033248; /*#033248-azul-escuro*/ }
+body { width: 100%; margin: 0; }
+.coluna-central { width: 50%; max-width: 320px; margin: 0 auto; }
+.secao9, .secao10 { display: none; }
+
+.title, .subtitle { text-align: center; border: none; transition: all 0.6s cubic-bezier(0,0.7,0.2,1) 0s;}
+.title { 
+	font-size: 0.4rem;
+	color: #bfacbf; /*#927592-lightMagenta*/
+	background-color: rgba(0,0,0,0.2);
+	text-shadow: 0.5px 0.5px bisque; 
+	font-family: Georgia, serif;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12); 1px 2px rgba(0,0,0,0.24); 
+	letter-spacing: 1px;
+	padding: 20px;
+	border-radius: 48px;
+	/*background: #33b5e5;*/
+}
+.subtitle {
+	font-size: 0.6rem;
+	color: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.12); 1px 2px rgba(0,0,0,0.24); 
+	border-radius: 32px; 
+	/*background: #33b5e5;*/
+}
+.title:hover, .subtitle:hover { color: #0099cc; cursor: pointer; }
+.title:hover { font-size: 0.8rem; text-shadow: 2px 2px #dddbdd; }
+.subtitle:hover { font-size: 1rem; background-color: #fff; text-shadow: 1px 1px #cece8b; }
+.title h1 { margin: 0; }
+.subtitle h2 { margin: 0; }
+
+/*Atenção: os elemts fig de dentro da coluna-cental têm duas imgs cada qual 50%!*/
+.coluna-central > div.video { width: 100%; margin: 0; content: ""; clear: both; display: table; }
+.instrumento { font-size: 0.8em; font-family: 'helvetica neue', helvetica, sans-serif; letter-spacing: 1px; text-transform: uppercase; text-align: center; width: 49%; height: 80px; 
+color: black; /*rgba(0,0,200,0.6)*/ border: 0.3px solid rgba(91, 91, 130, 0.6); /*rgba(0,0,200,0.6)*/ background: rgba(190,190,199,0.4); /*#366288 #174973 rgba(0,0,200,0.3)*/ box-shadow: 1px 1px 2px rgba(190,190,199,0.4); border-radius: 10px;
+
+/*text-shadow: 1px 1px yellow; background-color: rgba(202, 10, 202,0.1); border: 0.3px outset white;*/ /*rgba(37,43,76,0.24)*/ display: inline-block; margin: 0 auto; padding-top: 30%; cursor: pointer; 
+/*Centralizando uma linha de texto em uma div*/ /*line-height: 80px;*/ overflow: hidden; }
+.instrumento:hover { background: rgba(190,190,199,0.8); box-shadow: 1px 1px 8px aliceblue; color: aliceblue; }
+
+#btn-corneta, #btn-tuba, #btn-clarinete, #btn-oboe, #btn-viola, #btn-violoncelo, #btn-violino, #btn-contra-baixo { padding-top: 15%; }
+
+#btn-corneta { font-size: 0.75em; }
+#btn-clarinete { font-size: 0.7em; }
+#btn-violoncelo { font-size: 0.65em; }
+
+#palco-fundo div:first-of-type, #palco-meio div:first-of-type, #palco-frente div:first-of-type, #palco-lateral div:first-of-type { margin-right: 2px; }
+
+/*Atenção: os elemts fig de fora da coluna-cental têm apenas uma img, portanto ela cobre os 100% do seu container!*/
+main > div.video { width: 25%; display: inline-block; margin: 0; }
+.esquerda .instrumento, .direita .instrumento { width: 100%; margin: 0; }
+.esquerda { float: left; }
+.direita { float: right; }
+
+
+.title h1 { margin: 0; }
+.subtitle h2 { margin: 0; }
+
+
+p { text-align: justify; }
+a { color: black; text-decoration: none; }
+
+.captionlinks { color: #020102; /*#332d33 #0099cc*/ text-shadow: 1px 1px #dddbdd; /*yellow*/ text-decoration: none; padding: 5px; }
+
+	
+/*Tooltip*/
+.tooltip { position: relative; display: inline-block; }
+.tooltip .tooltiptext { 
+	visibility: hidden;
+	width: 120px;
+	background-color: rgba(0,0,0,0.4); 
+	color: #0099cc; 
+	text-shadow: 1px 1px yellow; 
+	text-align: center; 
+	border-radius: 12px; 
+	padding: 5px 20px; 
+	
+	/*posicionando o tooltip*/
+	position: absolute; z-index: 1; bottom: 80%; left: 105%; 
+	
+	/*posicionando o tooltip em rel ao containter*/
+	margin-left: -70px; opacity: 0; transition: opacity 0.3s; 
+}
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+
+
+/*Video de apresentação de instrumento*/
+/*.context-relative { position: relative; display: inline-block; }*/
+.videoContainer { position: fixed; top: 50%; transform: translate(-50%,-50%); width: 280px; height: 205px; border-radius: 22px; background-color: #EEE; background-image: linear-gradient(to bottom, rgba(3, 50, 72,0.7), rgba(240, 248, 255,0.2), rgba(3, 50, 72,0.7)); } 
+div iframe { display: block; margin: 10px auto; text-shadow: none; }
+.videoContainer p { text-align: center; line-height: 20px; }
+
+.showing { left: 50%; }
+.hidden { right: 200%; }
+
+
+
+/*Galeria de Imagens*/
+.img-gallery { background-color: #dddbdd; width: 300px; height: 240px; position: relative; right: 21%; margin: 0 auto; }
+.full-img { position: relative; display: block; width: 300px; height: 240px; }
+.overlay { position: absolute; top: 0; left: 0; width: 300px; height: 240px; background-color: rgba(0,0,0,0); }
+.full-img img { width: inherit; height: inherit; }
+.img-gallery button { background: rgba(150,150,150,0.6); text-shadow: 1px 1px 1px white; border: 1px solid #999; border-radius: 4px; position: absolute; top: 2px; left: 2px; cursor: pointer; }
+.thumb-bar img { display: block; width: 20%; float: left; cursor: pointer; }
+
+
+/*Artigo*/
+aside article { width: 300px; background-color: #dddbdd; border-radius: 12px; padding: 10px; margin: 0 auto; padding-bottom: 20px; position: relative; right: 21%; }
+aside h2 { line-height: 46px; }
+aside h3 { color: #9e8686; text-shadow: 1px 1px #cece8b; /*color: #0099cc; text-shadow: 1px 1px yellow;*/ text-align: center; }
+aside small { font-size: 0.6rem; }
+.article-title, .figure-title { 
+	width: 100%;
+	font-size: 0.9rem;
+	text-align: center; border: none; transition: all 0.6s cubic-bezier(0,0.7,0.2,1) 0s; 
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.12); 1px 2px rgba(0,0,0,0.24); 
+	border-radius: 32px;
+	color: aliceblue; /*#ffffff*/
+	background-color: none; /*#033248*/
+	border: 1px solid aliceblue;
+	padding: 15px; 
+	margin: 0;
+	margin-bottom: 20px;  
+}
+.article-title:hover, .figure-title:hover { font-size: 1.6rem; color: rgba(32, 17, 49, 0.5); /*#0099cc*/ background-color: aliceblue; text-shadow: 1px 1px #bdbdb6; /*#bdbdb6 #96968e*/ cursor: pointer; }
+
+
+footer { font-family: Georgia, serif; width: 80%; max-width: 940px; margin: 0 auto; text-shadow: 0.5px 0.5px #564556; }
+footer p { font-weight: bold; padding: 10px 10px 10px 5px; }
+
+
+/*Media Queries*/
+@media only screen and (min-width: 440px) {
+	
+	.img-gallery { width: 360px; height: 310px;  }
+	.full-img { width: 360px; height: 310px; }
+	.overlay { width: 360px; height: 310px; }
+	aside article { width: 360px; }
+}
+@media only screen and (min-width: 540px) {
+	
+	.img-gallery { width: 440px; height: 275px; }
+	.full-img { width: 440px; height: 275px; }
+	.overlay { width: 440px; height: 275px; }
+	aside article { width: 440px; }
+}
+
+/*
+	Início da transformação no Layout
+*/
+@media only screen and (min-width: 640px) {
+	/*Alterando o Aside (Gallery e Article)*/
+	.img-gallery { width: 300px; height: 240px; right: 0; }
+	.full-img { width: 300px; height: 240px; }
+	.overlay { width: 300px; height: 240px; }
+	aside article { width: 300px; right: 0; }
+	
+	/*Alterando a extensão da "coluna-central"*/
+	.secao1, .secao2, .secao4, .secao5, .secao6, .secao7 { display: none; }
+	
+	#btn-piano, #btn-timpano { padding-top: 20%; }
+	#btn-corneta, #btn-tuba, #btn-clarinete, #btn-oboe, #btn-viola, #btn-violoncelo, #btn-violino, #btn-contra-baixo { padding-top: 10%; }
+	main > div.video  .instrumento { height: 210px; padding-top: 50%; }
+	.coluna-central > div.video { clear: none; }
+	#palco-meio { position: absolute; top: 150px; width: 50%; }
+	#btn-clarinete { position: fixed; left: -13%; /*position: absolute; right: 395px;*/ }
+	#btn-oboe { position: fixed; top: 120px; right: -12%;  /*position: absolute; left: 395px;*/ }
+	
+	
+	#palco-frente { position: absolute; top: 290px; width: 50%; }
+	#btn-viola { position: fixed; left: -13%; }
+	#btn-violoncelo { position: fixed; top: 270px; right: -12%; }
+	
+	#palco-lateral { position: absolute; top: 470px;width: 50%; }
+	#btn-violino { position: fixed; top: 450px; left: -13%; }
+	#btn-contra-baixo { position: fixed; top: 430px; right: -11%; }
+	
+	.instrumento { font-size: 2em; color: #332d33; /*#bfacbf*/ text-shadow: 2px 2px #dddbdd; background: transparent; box-shadow: none; border: transparent; overflow: visible; z-index: 0; }
+	.instrumento:hover { color: aliceblue; /*aliceblue #bfacbf*/ text-shadow: 0.5px 0.5px bisque; background: none; /*rgba(190,190,199,0.3)*/ box-shadow: none; /*1px 1px 8px aliceblue;*/ }
+	#btn-corneta { font-size: 1.5em; }
+	#btn-clarinete { font-size: 1.3em; }
+	#btn-violoncelo { font-size: 1.2em; }
+	#btn-violino { font-size: 1.8em }
+	#btn-contra-baixo { font-size: 1.2em; }
+	
+	/*Fontes*/
+	.title { font-size: 1.5rem; }
+	.title:hover { font-size: 1.8rem; }
+	
+	.videoContainer { top: 80%; z-index: 100; }
+	.img-gallery, .title, .title h1,  .secao3, .secao4, .secao8, .secao9, .secao10 { z-index: 20; }
+	 
+}
+
+@media only screen and (min-width: 768px) {
+	.img-gallery { width: 400px; height: 260px; right: 11%; }
+	.full-img { width: 400px; height: 260px; }
+	.overlay { width: 400px; height: 260px; }
+	aside article { width: 400px; right: 11%; }
+	
+	/*Iframes*/
+	.videoContainer { width: 320px; height: 245px; }
+	iframe { width: 270px; height: 170px; }
+	
+	/*Fontes*/
+	.title { font-size: 1.8em; }
+	.subtitle { font-size: 1em; } 
+	.subtitle:hover { font-size: 1.2em; } 
+	.article-title, .figure-title { font-size: 1.6em; }
+	.article-title:hover, .figure-title:hover { font-size: 1.8em; }
+	
+	.instrumento { font-size: 2.3em; }
+	#btn-corneta { font-size: 1.6em; }
+	#btn-clarinete { font-size: 1.5em; }
+	#btn-violoncelo { font-size: 1.5em; }
+	#btn-contra-baixo { font-size: 1.3em; }
+	
+	
+	.secao4 { display: block; }
+}
+
+@media only screen and (min-width: 910px) {
+	.img-gallery { width: 450px; height: 280px; right: 21%; }
+	.full-img { width: 450px; height: 280px; }
+	.overlay { width: 450px; height: 280px; }
+	aside article { width: 450px; right: 21%; }
+	
+	.article-title, .figure-title { font-size: 1.0em; }
+	.article-title:hover, .figure-title:hover { font-size: 1.3em; }
+	
+	.instrumento { font-size: 2.5em; }
+	#btn-corneta { font-size: 1.6em; }
+	#btn-clarinete { font-size: 1.6em; }
+	#btn-violoncelo { font-size: 1.6em; }
+	#btn-violino { font-size: 2em }
+	#btn-contra-baixo { font-size: 1.4em; }
+	
+	footer { font-size: 1.3em;  }
+	
+	/*Iframes*/
+	.videoContainer { width: 420px; height: 245px; }
+	iframe { width: 370px; height: 170px; }
+}
+
+@media only screen and (min-width: 1070px) {
+	.grid { display: grid; grid-template-columns: 0.5fr 320px 0.5fr 1fr; grid-template-rows: 65px auto auto; }
+	.grid::after { content: ""; background-color: white; grid-column: 1 /5; grid-row: 1 / 2; }
+	
+	.esquerda { grid-area: 2 / 1 / 3 / 2; }
+	.coluna-central { grid-area: 2 / 2 / 3 / 3; }
+	.direita { grid-area: 2 / 3 / 3 / 4; }
+	footer { grid-area: 3 / 1 / 4 / 5; }
+	
+	.coluna-central { width: 100%; margin: 0; }
+	
+	/*Movendo o Aside - Article*/
+	aside { position: absolute; left: 65%; }
+	
+	.aside-inrows1, .aside-inrows2 { display: none; }
+	.secao9, .secao10 { display: block; }
+	
+	.img-gallery { width: 360px; height: 310px; right: 0; }
+	.full-img { width: 360px; height: 310px; }
+	.overlay { width: 360px; height: 310px; }
+	aside article { width: 360px; right: 0; }
+	
+	.article-title { margin-top: 230px; }
+	
+	/*Corrigindo os ".instrumento" da direita*/
+	#btn-clarinete { position: fixed; left: -16%; }
+	#btn-oboe { position: fixed; right: 20%; }
+	#btn-viola { position: fixed; left: -17%; }
+	#btn-violoncelo { position: fixed; right: 20%; }
+	#btn-violino { position: fixed; left: -15%; }
+	#btn-contra-baixo { position: fixed; right: 20%; }
+	
+	.subtitle, h2 { display: inline; width: 25%; box-shadow: none; color: #9e8686; }
+	.subtitle { font-size: 0.8em; }
+	.subtitle:hover { font-size: 0.8em; background: none; text-shadow: 1px 1px #cece8b; }
+	#subtitle1 { position: absolute; top: 0; left: 0; }
+	#subtitle2 { position: absolute; top: 0; left: 260px; }
+	#subtitle3 { position: absolute; top: 0; left: 530px; }
+	#subtitle4 { position: absolute; top: 8px; left: 800px; }
+	
+	
+	#palco-meio { top: 250px; }
+	#btn-oboe { position: fixed; top: 220px; }
+	
+	#palco-frente { top: 390px; }
+	#btn-violoncelo { position: fixed; top: 370px; }
+	
+	#palco-lateral { top: 570px; }
+	#btn-violino { position: fixed; top: 550px; }
+	#btn-contra-baixo { position: fixed; top: 530px; }
+	
+	/*Iframes*/
+	.videoContainer { width: 290px; height: 245px; }
+	iframe { width: 240px; height: 170px; }
+	.showing { left: 32%; }
+}
+
+@media only screen and (min-width: 1190px) {
+	
+	aside { position: absolute; left: 63%; }
+	.img-gallery { width: 430px; height: 265px; }
+	.full-img { width: 430px; height: 265px; }
+	.overlay { width: 430px; height: 265px; }
+	aside article { width: 430px; }
+	
+	.secao9 { display: none; }
+	
+	#btn-oboe { right: 21%; }
+	#btn-violoncelo { right: 22%; }
+	#btn-contra-baixo { right: 22%; }
+	
+	#palco-frente { top: 410px; }
+	#btn-violoncelo { top: 390px; }
+	
+	#palco-lateral { top: 590px; }
+	#btn-violino { top: 570px; }
+	#btn-contra-baixo { top: 550px; }
+	
+	
+	.instrumento:hover { font-size: 2.9em; }
+	#btn-corneta:hover { font-size: 1.7em; }
+	#btn-clarinete:hover { font-size: 1.9em; }
+	#btn-violoncelo:hover { font-size: 1.9em; }
+	#btn-violino:hover { font-size: 2.2em }
+	#btn-contra-baixo:hover { font-size: 1.8em; }
+	
+	#subtitle1 { left: -25px; }
+	#subtitle2 { left: 260px; }
+	#subtitle3 { left: 600px; }
+	#subtitle4 { top: 3px; left: 900px; }
+	
+	/*Iframes*/
+	.showing { left: 31.5%; }
+}
+
+@media only screen and (min-width: 1300px) {
+	
+	aside { position: absolute; left: 62%; }
+	.img-gallery { width: 480px; height: 310px; }
+	.full-img { width: 480px; height: 310px; }
+	.overlay { width: 480px; height: 310px; }
+	aside article { width: 480px; }
+	
+	.article-title, .figure-title { font-size: 1.6em; }
+	.article-title:hover, .figure-title:hover { font-size: 1.8em; }
+	
+	
+	.secao9 { display: none; }
+	
+	#subtitle1 { left: -15px; }
+	#subtitle2 { left: 330px; }
+	#subtitle3 { left: 660px; }
+	#subtitle4 { left: 980px; }
+	
+	
+	#palco-meio { top: 160px; }
+	#btn-oboe { top: 160px; }
+	
+	#palco-frente { top: 360px; }
+	#btn-violoncelo { top: 360px; }
+	
+	/*Iframes*/
+	.videoContainer { width: 360px; height: 245px; }
+	iframe { width: 310px; height: 170px; }
+	.showing { left: 31%; }
+}
+
+@media only screen and (min-width: 1400px) {
+	
+	aside { position: absolute; left: 61%; }
+	.img-gallery { width: 530px; height: 340px; }
+	.full-img { width: 530px; height: 340px; }
+	.overlay { width: 530px; height: 340px; }
+	aside article { width: 530px; }
+	
+	
+	.subtitle { font-size: 0.7em; }
+	.subtitle:hover { font-size: 0.7em; }
+	#subtitle1 { left: -30px; }
+	#subtitle2 { left: 340px; }
+	#subtitle3 { left: 750px; }
+	#subtitle4 { left: 1100px; }
+	
+	/*Iframes*/
+	.videoContainer { width: 380px; height: 245px; }
+	iframe { width: 330px; height: 170px; }
+	.showing { left: 30%; }
+	
+	#palco-meio { top: 165px; }
+	#palco-frente { top: 340px; } 
+	#btn-violino { top: 550px; } 
+}
+@media only screen and (min-width: 1540px) {
+	
+	aside { position: absolute; left: 63%; }
+	.img-gallery { width: 560px; height: 330px; }
+	.full-img { width: 560px; height: 330px; }
+	.overlay { width: 560px; height: 330px; }
+	aside article { width: 560px; }
+	
+	.instrumento:hover { font-size: 3.1em; }
+	#btn-corneta:hover { font-size: 1.9em; }
+	#btn-clarinete:hover { font-size: 2.1em; }
+	#btn-violoncelo:hover { font-size: 2.1em; }
+	#btn-violino:hover { font-size: 2.4em }
+	#btn-contra-baixo:hover { font-size: 2.0em; }
+	
+	#subtitle1 { left: -50px; }
+	#subtitle2 { left: 360px; }
+	#subtitle3 { left: 820px; }
+	#subtitle4 { left: 1250px; }
+	
+	/*Iframes*/
+	.videoContainer { width: 450px; height: 255px; }
+	iframe { width: 400px; height: 180px; }
+	.showing { left: 30%; }
+}

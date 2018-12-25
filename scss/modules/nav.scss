@@ -1,0 +1,45 @@
+/*Navigation Modules*/
+.nav > ul { 
+			/* It would be better practice to create a .nav-list module.*/
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.nav-primary {
+	margin-top: 35px; /* ou 28px conferir? */
+	
+			/*Atenção: Tirando a navegação do estado inicial do layout mobile*/
+	display: none;
+	
+	@include medium-and-above {
+		/*Forçando o aparecimento da navegação para dispositivos maiores que 48em*/
+		display: block;
+		
+		/*Veja que no projeto final estas 03 linhas abaixo são retiradas por causa da inclusão do padrão Flexbox no .container de header*/
+		float: right;
+		width: 60%; /*leaving space to Logo*/
+		text-align: right;
+		
+		
+		/*Retirando o margin-top que temos para dispositivos menores que 48em*/
+		margin-top: 0;
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+.nav-color-primary { color: #b1a786; font-weight: bold; text-shadow: 0.4px 0.4px #e6e8e1; 
+  @include medium-and-above {
+		color: #334a5f; text-shadow: 1px 1px #dedbbf;
+	}
+}
+.nav-color-secondary { color: #334a5f; text-shadow: 1px 1px #dedbbf; }
+
+
+.nav-pad {
+	padding-top: 35px; padding-bottom: 35px; 
+}
+
+.nav-pad-top { padding-top: 10px; }
+

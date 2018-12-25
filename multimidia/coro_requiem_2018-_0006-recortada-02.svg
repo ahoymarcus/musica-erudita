@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+
+  <title>Coro Sinfônico Comunitário da UnB</title>
+  <desc>Apresentação do Coro Sinfônico Comunitário da UnB - Requiem, 1º semestre de 2018</desc>
+  
+	<defs>
+    <linearGradient id="grad">
+		  <stop offset="0%" stop-color="#fff" />
+			<stop offset="100%" stop-color="#000" />
+		</linearGradient>
+
+		<mask id="msk">
+		  <rect x="410" y="0"
+			  width="1196" height="746"
+				fill="url(#grad)" />
+		</mask>
+  </defs>
+
+  <image xlink:href="coro_requiem_2018-_0006-recortada-02.jpg" mask="url(#msk)" x="0" y="0" width="1196" height="746" />
+
+
+
+
+
+
+
+
+
+</svg>

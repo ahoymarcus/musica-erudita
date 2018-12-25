@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>A Música Erudita</title>
+	<meta name="description" content="A Música Erudita, uma Pequena História da Música Erudita, a Orquestra Sinfônica e os Compositores da Música Erudita no Mundo e no Brasil." />
+	
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+	
+	<style>
+		/***************************
+		****************************
+		Reset Styles
+		****************************
+		***************************/
+		@import 'normalize.css';
+		
+		html { box-sizing: border-box; background-image: linear-gradient(#2c3c3c, lightgoldenrodyellow 20%,#2c3c3c); /*antiquewhite #033248 rgb(250, 235, 215)*/ }
+		*, *:before, *:after { box-sizing: inherit; }
+		
+		@media only screen and (min-width: 1200px) {  
+			html { background-image: linear-gradient(rgba(44, 60, 60,0.6), lightgoldenrodyellow 20%, rgba(44, 60, 60,0.4), rgba(185, 156, 118, 0.8));  
+			height: 1500px; } 
+		} 
+		
+		
+		<!-- @media only screen and (min-width: 1200px) {  -->
+			<!-- html { background-image: linear-gradient(rgba(44, 60, 60,0.6), lightgoldenrodyellow 20%, rgba(44, 60, 60,0.8));  -->
+			<!-- background-repeat: repeat; background-size: cover; } -->
+		<!-- } -->
+		
+		/***************************
+		****************************
+		Base Styles
+		****************************
+		***************************/
+		body { color: black; font-family: 'Quattrocento', serif; font-weight: normal; width: 90%; height: 1300px;  margin: 25px auto 50px auto; max-width: 708px; }
+		
+		@media only screen and (min-width: 660px) { 
+			body { width: 75%; }
+		}
+		@media only screen and (min-width: 900px) {
+			body { width: 65%; }
+		}
+		@media only screen and (min-width: 1110px) {
+			body { width: 60%; }
+		}
+		@media only screen and (min-width: 1200px) { 
+			body { width: 55%; }
+		}
+		@media only screen and (min-width: 1310px) { 
+			body { width: 52%; }
+		}
+		
+		h1, h4 { font-family: 'Courgette', cursive; padding: 5px; }
+		a { color: black; font-weight: bold; text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		
+		/***************************
+		****************************
+		Layout Styles
+		****************************
+		***************************/
+		.container { 
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto; 
+			margin-left: auto;
+			max-width: 1170px;
+		}
+		
+		
+		/***************************
+		****************************
+		Module Styles
+		****************************
+		***************************/
+		/*Logo Modules*/
+		p small { font-family: 'Courgette', cursive; text-shadow: 1px 1px #eae7ca}
+		
+		
+		/*Hero Modules*/
+		.hero { text-align: center; }
+		.hero-body { position: relative; }
+		
+		.hero-title { text-shadow: 1px 1px #eae7ca; font-size: 3.8em; margin-top: 0px; margin-bottom: 70px; }
+		.hero-subtitle { color: #334a5f; /*#9199a0 #afc9e0 #e8ded9 #e8b193*/ text-shadow: 1px 1px #eae7ca; font-size: 1.500em; font-weight: normal; margin-top: 70px; margin-bottom: 0px; }
+		
+		.hero-primary { padding-top: 25px; padding-bottom: 25px; height: 600px; /*background-color: Khaki;*/ }
+		.hero-primary .hero-body { margin: 10px auto; }
+		.hero-primary.bg-image > img { opacity: 0.4; }
+		.hero-primary h4 { margin: 0; }
+		
+		@media only screen and (max-width: 345px) {
+			.hero-title { font-size: 3.1em; }
+			.hero-subtitle { font-size: 1.400em; }
+		}
+		@media only screen and (min-width: 395px) { 
+			.hero-title { margin-bottom: 80px; }
+			.hero-subtitle { margin-top: 80px; }
+		}
+		@media only screen and (min-width: 448px) { 
+			.hero-title { font-size: 4em; }
+			.hero-subtitle { margin-top: 90px; }
+		}
+		@media only screen and (min-width: 560px) { 
+			.hero-title { font-size: 4.4em; }
+			.hero-subtitle { margin-top: 105px; }
+		}
+		@media only screen and (min-width: 660px) { 
+			.hero-title { font-size: 4.8em; margin-bottom: 100px; }
+			
+		}
+		@media only screen and (min-width: 768px) { 
+			.hero-title { font-size: 5.2em; }
+		}
+		@media only screen and (min-width: 1035px) { 
+			.hero-title { font-size: 5.5em; margin-bottom: 100px; }
+			.hero-subtitle { font-size: 1.650em; }
+		}
+		@media only screen and (min-width: 1200px) { 
+			.hero-primary.bg-image > img { opacity: 0.6; }
+		}
+		
+		/*Background Modules*/
+		.bg-image { width: 100%; height: 1400px; overflow: hidden; position: relative; border-radius: 10px; }
+		.bg-image img { position: absolute; top: -9999px; bottom: -9999px; right: -9999px; left: -9999px; margin: auto; min-width: 100%; }
+		
+		
+	</style>
+	
+</head>
+<body>
+<main>
+	
+	 <section class="hero hero-primary bg-image">
+		<img src="imagens/arc-art-bass-big.jpg" alt="imagem de um violino sobre uma partitura" />
+		<div class="container">
+			<div class="hero-body">
+				<h1 class="hero-title"><em>A Música Erudita</em></h1>
+				<h2 class="hero-subtitle"><a href="coral-mundo.html">Os grandes Compositores de Música Erudita no Mundo:</a></h2><h4> as obras e a vidas dos grandes compositores da Música Erudita</h4>
+				<h2 class="hero-subtitle"><a href="coral-brasil.html">A Música Erudita no Brasil:</a></h2><h4> os compositores brasileiros e suas principais obras</h4>
+				<h2 class="hero-subtitle"><a href="coral-historico.html">Pequeno Histórico da Música Erudita</a></h2><h4> uma breve passagem pelos principais períodos históricos da Música Erudita (P. Medieval, P. Renascentista, P. Barroco, P. Clássico, P. Romântico e os P. Moderno e Contemporâneo)</h4>
+				<h2 class="hero-subtitle"><a href="coral-vozes.html">Conhecendo as Vozes dentro de um Coral Sinfônico</a></h2><h4> a tradicional divisão entre as tonalidades básicas de um coral e as vozes de transição e infantis</h4>
+				<h2 class="hero-subtitle"><a href="musicTriviaGameApp.html">Jogo de Trivia:</a></h2><h4> teste seus conhecimentos sobre a Música Erudita.</h4>
+				<h2 class="hero-subtitle"><a href="musicTriviaGameApp.html">Pequena Orquestra-app:</a></h2><h4> Passeie e veja uma pequena orquestra e alguns de seus instrumentos neste pequeno aplicativo.</h4>
+			</div>  
+		</div>
+      </section>
+	
+</main>
+
+
+<footer class="clearfix">
+	<p><small>MaisSinging</small></p>
+</footer>
+
+	
+
+
+
+
+
+
+</body>
+</html>

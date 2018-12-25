@@ -1,0 +1,53 @@
+/*Hero Modules*/
+.hero { 
+	text-align: center; 
+	.hero-body { 
+	  /*Usando do contexto de pos para colocar o conteúdo de .hero-body à frente na pilha*/
+		position: relative; 
+	}
+	.hero-title { font-size: 4.625em; margin-top: 5px; margin-bottom: 35px; color: #bb826b; /*#9199a0 #afc9e0 #e8ded9 #e8b193*/ text-shadow: 2px 2px #4a3737; /*#eae7ca*/ }
+	.hero-subtitle { color: #4a3737; /*#9199a0 #afc9e0 #e8ded9 #e8b193*/ text-shadow: 1px 1px #efefea; /*#eae7ca*/ font-size: 2.200em; font-weight: normal; margin-top: 25px; margin-bottom: 25px; }
+}
+
+.hero-primary { 
+	padding-top: 25px; padding-bottom: 25px; height: 600px; 
+	&.bg-image > img { opacity: 0.8; }
+	& .hero-body { margin: 120px auto;
+    @include medium-and-above {
+			margin: 260px auto;
+			 
+		}
+	}
+}
+
+.hero-secondary { 
+	padding-top: 20px; padding-bottom: 40px; height: 560px; 
+	
+	&  .hero-subtitle, & .hero-title  { visibility: hidden; }
+	& .hero-title {
+    font-size: 3.625em;		
+	  padding-top: 265px; 
+		@include medium-and-above {
+			padding-top: 160px;
+		}
+	}
+	
+	& .hero-body { margin: 120px auto;
+    @include medium-and-above {
+			margin: 260px auto;
+			 
+		}
+	}
+	
+	&.bg-image > img { opacity: 0.7; }
+}
+
+@media only screen and (min-width: 48em) {
+	.hero-secondary{ height: 300px; }
+}
+
+.hero-subtitle + button { margin-top: 25px; }
+
+
+
+
