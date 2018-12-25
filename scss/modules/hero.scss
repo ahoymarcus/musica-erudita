@@ -11,6 +11,10 @@
 
 .hero-primary { 
 	padding-top: 25px; padding-bottom: 25px; height: 600px; 
+	@include hyper-small-only {
+		height: 730px;
+	}
+	
 	&.bg-image > img { opacity: 0.8; }
 	& .hero-body { margin: 120px auto;
     @include medium-and-above {

@@ -421,6 +421,7 @@ body {
     margin: 0 auto; }
 
 /*
+	hyper-small: at├® 352px
   extra-small: at├® 400px
 	small: at├® 768px
 	medium: de 768px at├® 
@@ -428,6 +429,8 @@ body {
 */
 /*768px / 16px = 48em*/
 /* 400px */
+/* 352px */
+/*mixin that will apply only to hyper-small devices*/
 /*mixin that will apply only to extra small devices*/
 /*Inserindo o uso de vari├íveis, o projeto fica mais manuten├¡vel. Agora, em um ├║nico lugar os valores de .row e [class*='col-'] podem ser trabalhados em conjunto*/
 /***************************
@@ -747,6 +750,9 @@ Module Styles
   padding-top: 25px;
   padding-bottom: 25px;
   height: 600px; }
+  @media only screen and (max-width: 22em) {
+    .hero-primary {
+      height: 730px; } }
   .hero-primary.bg-image > img {
     opacity: 0.8; }
   .hero-primary .hero-body {

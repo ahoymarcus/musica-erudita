@@ -1,4 +1,5 @@
 /*
+	hyper-small: até 352px
   extra-small: até 400px
 	small: até 768px
 	medium: de 768px até 
@@ -6,6 +7,14 @@
 */
 $mq-1: 48em !default; /*768px / 16px = 48em*/
 $mq-2: 25em; /* 400px */
+$mq-3: 22em; /* 352px */
+
+/*mixin that will apply only to hyper-small devices*/
+@mixin hyper-small-only {
+	@media only screen and (max-width: $mq-3) {
+		@content
+	}
+}
 
 /*mixin that will apply only to extra small devices*/
 @mixin extra-small-only {
